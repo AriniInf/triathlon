@@ -39,6 +39,7 @@ $routes->get('/home.login', 'Home::login');
 
 $routes->get('/register','Register::index');
 $routes->get('/login','Login::index');
+$routes->get('/paket','Paket::index');
 $routes->get('/dashboard','Dashboard::index');
 $routes->post('/post-register','Register::save');
 $routes->post('/post-login','Login::auth');
