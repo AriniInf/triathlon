@@ -25,9 +25,8 @@
 		</div> -->
 		
 		<div class="form-v10-content">
-
 			
-			<form class="form-detail" action="#" method="post" id="myform">
+			<form class="form-detail" action="/post-login" method="post" id="myform">
 
 				<div class="form-right" class="center">
 
@@ -44,6 +43,11 @@
 						     <div class="form-row">
 						     		<input style="font-size: 22px" type="password" name="password" class="password" id="password" placeholder="Password" required>
 						     </div>
+						     <?php if(session()->getFlashdata('msg')):?>
+						     <div class="form-row">
+								    <div class="alert alert-danger"><?= session()->getFlashdata('msg') ?></div>							     	
+						     </div>
+						     <?php endif;?>	
 
 						     <div class="form-akhir">
 						     		<input type="submit" name="register" class="register" value="Login" style="margin-bottom: 10px">

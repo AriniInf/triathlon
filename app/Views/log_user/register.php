@@ -28,7 +28,7 @@ Duathlon -->
 <body class="form-v10">
 	<div class="page-content">
 		<div class="form-v10-content">
-			<form class="form-detail" action="#" method="post" id="myform">
+			<form class="form-detail" action="/post-register" method="post" id="myform">
 				<a href="<?= base_url('') ?>"><img src="<?= base_url('assets/img/prev1.png') ?>" alt="back" style="width:40px;height:40px;padding: 50px 0px 0px 50px"></a>
 				<div class="form-left">
 
@@ -36,30 +36,30 @@ Duathlon -->
 
 					<div class="form-group">
 						<div class="form-row form-row-1">
-							<input type="text" name="full_name" id="full_name" class="input-text" placeholder="Full Name" required>
+							<input type="text" name="nama_panjang" id="full_name" class="input-text" placeholder="Full Name" required>
 						</div>
 						<div class="form-row form-row-2">
-							<input type="text" name="first_name" id="first_name" class="input-text" placeholder="Nick Name" required>
+							<input type="text" name="nama_panggilan" id="first_name" class="input-text" placeholder="Nick Name" required>
 						</div>
 					</div>
 					<div class="form-row">
 						<label for="date" style="color: #666;padding: 11.5px 15px 15px 15px">Date Of Birth</label>
-						<input type="date" name="tgllahir" class="tgllahir" id="tgllahir" placeholder="Tanggal Lahir" required style="color: #ccc">
+						<input type="date" name="tanggal_lahir" class="tgllahir" id="tgllahir" placeholder="Tanggal Lahir" required style="color: #ccc">
 					</div>
 					<div class="form-row">
-						<input type="text" name="nationality" class="nationality" id="nationality" placeholder="Country Of Citizenship" required>
+						<input type="text" name="kewarganegaraan" class="nationality" id="nationality" placeholder="Country Of Citizenship" required>
 					</div>
 					<div class="form-row">
-						<input type="text" name="ktp" class="ktp" id="ktp" placeholder="KTP Number" required>
+						<input type="text" name="no_ktp" class="ktp" id="ktp" placeholder="KTP Number" required>
 					</div>
 					<div class="form-row">
-						<input type="text" name="bib" class="bib" id="bib" placeholder="BIB Name" required>
+						<input type="text" name="nama_bib" class="bib" id="bib" placeholder="BIB Name" required>
 					</div>
 					<div class="form-row">
-						<input type="text" name="hp" class="hp" id="hp" placeholder="Phone Number" required>
+						<input type="text" name="no_hp" class="hp" id="hp" placeholder="Phone Number" required>
 					</div>
 					<div class="form-row">
-						<input type="text" name="jalan" class="jalan" id="jalan" placeholder="Adress (Street)" required>
+						<input type="text" name="alamat" class="jalan" id="jalan" placeholder="Adress (Street)" required>
 					</div>
 					<div class="form-group">
 						<div class="form-row form-row-1">
@@ -75,7 +75,7 @@ Duathlon -->
 							<input type="text" name="provinsi" id="provinsi" class="provinsi" placeholder="Province" required>
 						</div>
 						<div class="form-row form-row-2">
-							<input type="text" name="kodepos" id="kodepos" class="kodepos" placeholder="Zip Code" required>
+							<input type="text" name="kode_pos" id="kodepos" class="kodepos" placeholder="Zip Code" required>
 						</div>
 					</div>
 
@@ -93,8 +93,8 @@ Duathlon -->
 						</span>
 					</div>
 					<div class="form-row">
-						<select name="goldar">
-						    <option value="goldar">Blood Type</option>
+						<select name="gol_darah">
+						    <option value="gol_darah">Blood Type</option>
 						    <option value="A">A</option>
 						    <option value="B">B</option>
 						    <option value="AB">AB</option>
@@ -111,14 +111,14 @@ Duathlon -->
 					<h2>General Information</h2>
 
 					<div class="form-row">
-						<input type="text" name="komunitas" class="komunitas" id="komunitas" placeholder="Community Name" required>
+						<input type="text" name="nama_komunitas" class="komunitas" id="komunitas" placeholder="Community Name" required>
 					</div>
 					<div class="form-row">
-						<input type="text" name="swim_time" class="swim_time" id="swim_time" placeholder="Swim Time 750 m" required>
+						<input type="text" name="swim_time_750" class="swim_time" id="swim_time" placeholder="Swim Time 750 m" required>
 					</div>
 					<div class="form-row">
-						<select name="jersey">
-						    <option value="jersey">Jersey Size</option>
+						<select name="ukuran_jersey">
+						    <option value="ukuran_jersey">Jersey Size</option>
 						    <option value="S">S</option>
 						    <option value="M">M</option>
 						    <option value="L">L</option>
@@ -131,16 +131,16 @@ Duathlon -->
 					<h2>Emergency Contact</h2>
 
 					<div class="form-row">
-						<input type="text" name="nama_em" id="nama_em" class="nama_em" placeholder="Name" required>
+						<input type="text" name="ec_nama" id="nama_em" class="nama_em" placeholder="Name" required>
 
 					</div>
 
 					<div class="form-row">
-						<input type="text" name="hp_em" id="hp_em" class="hp_em" placeholder="Phone Number" required>
+						<input type="text" name="ec_hp" id="hp_em" class="hp_em" placeholder="Phone Number" required>
 					</div>
 
 					<div class="form-row">
-						<input type="email" name="email_em" id="email_em" class="input-text" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="Email">
+						<input type="email" name="ec_email" id="email_em" class="input-text" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="Email">
 					</div>
 
 					<h2>Account</h2>
@@ -151,6 +151,12 @@ Duathlon -->
 					<div class="form-row">
 						<input style="font-size: 22px" type="password" name="password" class="password" id="password" placeholder="Password" required>
 					</div>
+
+					<?php if(isset($validation)):?>
+						<div class="form-row">
+					    	<div class="alert alert-danger"><?= $validation->listErrors() ?></div>
+					    </div>
+					<?php endif;?>
 
 
 					<div class="form-akhir">

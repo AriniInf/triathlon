@@ -8,7 +8,7 @@ class Login extends Controller
     public function index()
     {
         helper(['form']);
-        echo view('login');
+        echo view('log_user/login');
     } 
  
     public function auth()
@@ -31,7 +31,7 @@ class Login extends Controller
                 $session->set($ses_data);
                 return redirect()->to('/dashboard');
             }else{
-                $session->setFlashdata('msg', 'Wrong Password');
+                $session->setFlashdata('msg', 'Wrong Email or Password');
                 return redirect()->to('/login');
             }
         }else{
