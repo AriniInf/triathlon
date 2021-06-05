@@ -9,4 +9,12 @@ class Home extends BaseController
 		return view('utama/dashboard');
 
 	}
+
+	public function register(){
+		return view('log_user/register');
+	}
+
+	public function login(){
+		return view('log_user/login');
+	}
 }

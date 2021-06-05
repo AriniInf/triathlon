@@ -50,7 +50,6 @@
 
       <div class="row logo mr-auto">
         <div class="col-md-4"><img class="img-responsive" src="<?= base_url('assets/img/iccom.png') ?>" alt="logo1"></div>
-<!--         <div class="col-md-8"> <h4 class="text-light"><a href="<?= base_url('') ?>">Unesa Triathlon</a></h4></div> -->
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -62,7 +61,7 @@
             <ul>
               <li class="drop-down"><a href="#">Unesa Triathlon 2021</a>
                 <ul>
-                  <li><a href="#">Triathlon</a></li>
+                  <li><a href="#about">Triathlon</a></li>
                   <li><a href="#">Duathlon</a></li>
                 </ul>
               </li>
@@ -72,7 +71,7 @@
           <li><a href="#portfolio">Gallery</a></li>
           <li><a href="#team">Ranking</a></li>
           <li><a href="#pricing">About Us</a></li>
-          <li><a class="btn btn-oren" href="#pricing" role="button" style="color: white">Login</a></li>
+          <li><a class="btn btn-oren" href="<?= base_url('home/login') ?>" role="button" style="color: white">Login</a></li>
 <!--           <li><a href="blog.html">Blog</a></li> -->
     <!--       <li class="drop-down"><a href="">Drop Down</a>
             <ul>
@@ -104,7 +103,7 @@
       <h1>Unesa Triathlon 2021</h1>
       <div class="d-flex align-items-center">
         <i class="bx bxs-right-arrow-alt get-started-icon"></i>
-        <a href="#about" class="btn-get-started scrollto">Get Started</a>
+        <a href="<?= base_url('home/register') ?>" class="btn-get-started scrollto">Register</a>
       </div>
     </div>
   </section><!-- End Hero -->
@@ -114,49 +113,7 @@
     <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="why-us">
       <div class="container">
-
-        <div class="row">
-          <div class="col-xl-4 col-lg-5" data-aos="fade-up">
-            <div class="content">
-              <h3>Why Choose Flexor for your company website?</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
-              </p>
-              <div class="text-center">
-                <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-8 col-lg-7 d-flex">
-            <div class="icon-boxes d-flex flex-column justify-content-center">
-              <div class="row">
-                <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                  <div class="icon-box mt-4 mt-xl-0">
-                    <i class="bx bx-receipt"></i>
-                    <h4>Corporis voluptates sit</h4>
-                    <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-                  </div>
-                </div>
-                <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                  <div class="icon-box mt-4 mt-xl-0">
-                    <i class="bx bx-cube-alt"></i>
-                    <h4>Ullamco laboris ladore pan</h4>
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-                  </div>
-                </div>
-                <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-                  <div class="icon-box mt-4 mt-xl-0">
-                    <i class="bx bx-images"></i>
-                    <h4>Labore consequatur</h4>
-                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
+          <br><br>
       </div>
     </section><!-- End Why Us Section -->
 
