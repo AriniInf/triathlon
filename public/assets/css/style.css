@@ -674,7 +674,8 @@ section {
 }
 
 .about .video-box {
-  background: url("../img/about-img.jpg") center center no-repeat;
+  background:center center no-repeat;
+  background-image:linear-gradient( rgba(224, 141, 63, 0.527), rgba(0,0,0,0.52)), url("../img/about/ab4.jpg");
   background-size: cover;
   min-height: 500px;
 }

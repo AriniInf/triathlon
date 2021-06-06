@@ -51,6 +51,9 @@ $routes->get('/gallery','Home::gallery');
 
 $routes->get('/dashboard_pembayaran','Dashboard::pembayaran');
 
+$routes->get('/login-admin', 'Admin::index');
+$routes->get('/dashboard-admin', 'Admin::dashboard_admin');
+
 
 
 

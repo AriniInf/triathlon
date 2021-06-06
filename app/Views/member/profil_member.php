@@ -28,6 +28,12 @@
 
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
   <!-- Template Main CSS File -->
   <link href="<?= base_url('assets/css/style.css') ?>" rel="stylesheet">
 
@@ -61,7 +67,7 @@
               <li><a href="#team">Ranking</a></li>
               <li><a href="#pricing">About</a></li>
               <li><a href="#pricing">Contact Us</a></li>
-              <li><a href="<?= base_url('dashboard_pembayaran') ?>">Akun Member</li>
+              <li><a href="<?= base_url('dashboard_pembayaran') ?>">Akun Member</a></li>
 
             </ul>
           </nav><!-- .nav-menu -->
@@ -72,7 +78,7 @@
 <!------ Include the above in your HEAD tag ---------->
 
 <div class="container emp-profile">
-            <form method="post">
+          <!--   <form method="post"> -->
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-img">
@@ -83,12 +89,17 @@
                     </div>
                     <div class="col-md-6">
                         <div class="profile-head">
+
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <input type="submit" class="profile-edit-btn btn btn-md" name="btnAddMore" style="color: white;background-color: #ff5821" value="Edit Profile"/>
+
+                        <!-- Button to Open the Modal -->
+
                     </div>
+
                 </div>
+
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-work">
@@ -99,8 +110,14 @@
                         </div>
                     </div>
                     <div class="col-md-8">
+
                         <div class="tab-content profile-tab" id="myTabContent">
                             <div class="tab-pane fade show active" role="tabpanel">
+                                <div class="container" style="text-align: right">
+                                    <button type="button" class="btn btn-md" data-toggle="modal" data-target="#edit-modal" style="color: white;background-color: #ff5821">
+                                      Edit Profile
+                                    </button>
+                                </div>
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <label>Full Name</label>
@@ -213,8 +230,70 @@
                         </div>
                     </div>
                 </div>
-            </form>           
+
+      <!--       </form>    -->        
         </div>
+
+
+        <div class="container">
+         <!-- The Modal -->
+
+         <div class="modal fade bd-example-modal-lg" id="edit-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+           <div class="modal-dialog modal-lg" role="document">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <h5 class="modal-title" id="exampleModalLabel"><strong>Edit Profile</strong></h5>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                   <span aria-hidden="true">&times;</span>
+                 </button>
+               </div>
+               <div class="modal-body">
+                 <form>
+                   <div class="form-group">
+                     <label for="fullname" class="col-form-label">Full Name:</label>
+                     <input type="text" class="form-control" id="nama_lengkap">
+                   </div>
+                   <div class="form-group">
+                     <label for="nama_panggilan" class="col-form-label">Nick Name:</label>
+                     <input type="text" class="form-control" id="nama_panggilan">
+                   </div>
+                   <div class="form-group">
+                     <label for="kewarganegaraan" class="col-form-label">Country Of Citizenship:</label>
+                     <input type="text" class="form-control" id="kewarganegaraan">
+                   </div>
+                   <div class="form-group">
+                     <label for="no_ktp" class="col-form-label">KTP:</label>
+                     <input type="text" class="form-control" id="no_ktp">
+                   </div>
+                   <div class="form-group">
+                     <label for="bibname" class="col-form-label">Bib Name:</label>
+                     <input type="text" class="form-control" id="nama_bib">
+                   </div>
+                   <div class="form-group">
+                     <label for="telp" class="col-form-label">Phone:</label>
+                     <input type="text" class="form-control" id="telp">
+                   </div>
+                     <hr style=" border: 0.3px solid red;margin-left: 0px">
+                   <div class="form-group">
+                     <label for="komunitas" class="col-form-label">Community Name:</label>
+                     <input type="text" class="form-control" id="komunitas">
+                   </div>
+                   <div class="form-group">
+                     <label for="swim_time" class="col-form-label">Swim Time 750 m:</label>
+                     <input type="text" class="form-control" id="swim_time" value="">
+                   </div>
+                 </form>
+               </div>
+               <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary pull-left" data-dismiss="modal">Close</button>
+                 <button type="button" class="btn btn-md" style="color: white;background-color: #ff5821">Save</button>
+               </div>
+             </div>
+           </div>
+         </div>
+
+        </div>
+
 
 
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>

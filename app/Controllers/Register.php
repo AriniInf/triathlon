@@ -40,8 +40,7 @@ class Register extends Controller
             'ec_email'  => 'required',
             'ec_hp'  => 'required',
             'ukuran_jersey'  => 'required',
-            'password'      => 'required|min_length[6]',
-            'confpassword'  => 'matches[password]'
+            'password'      => 'required|min_length[6]'
         ];
          
         if($this->validate($rules)){

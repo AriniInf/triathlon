@@ -61,7 +61,7 @@
               <li><a href="#team">Ranking</a></li>
               <li><a href="#pricing">About</a></li>
               <li><a href="#pricing">Contact Us</a></li>
-              <li><a href="<?= base_url('dashboard_pembayaran') ?>">Akun Member</li>
+              <li><a href="<?= base_url('dashboard_pembayaran') ?>">Akun Member</a></li>
 
             </ul>
           </nav><!-- .nav-menu -->
@@ -72,7 +72,7 @@
 <!------ Include the above in your HEAD tag ---------->
 
 <div class="container emp-profile">
-            <form method="post">
+        <!--     <form method="post"> -->
 
                 <div class="row">
                     <div class="col-md-4">
@@ -87,7 +87,7 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <input type="submit" class="profile-edit-btn btn btn-md" name="btnAddMore" style="color: white;background-color: #ff5821" value="Edit Profile"/>
+                       
                     </div>
                 </div>
 
@@ -114,7 +114,7 @@
                 </div>
                 <!-- tutup row -->
 
-            </form>           
+        <!--     </form>   -->         
         </div>
 
 
