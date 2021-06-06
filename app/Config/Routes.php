@@ -36,6 +36,7 @@ $routes->get('/', 'Home::index');
 
 $routes->get('/home/register', 'Home::register');
 $routes->get('/home.login', 'Home::login');
+$routes->get('/logout', 'Login::logout');
 
 $routes->get('/register','Register::index');
 $routes->get('/login','Login::index');
@@ -43,6 +44,15 @@ $routes->get('/paket','Paket::index');
 $routes->get('/dashboard','Dashboard::index');
 $routes->post('/post-register','Register::save');
 $routes->post('/post-login','Login::auth');
+
+$routes->get('/triathlon_unesa', 'Home::triathlon_unesa');
+$routes->get('/duathlon_unesa','Home::duathlon_unesa');
+$routes->get('/gallery','Home::gallery');
+
+$routes->get('/dashboard_pembayaran','Dashboard::pembayaran');
+
+
+
 
 
 /*

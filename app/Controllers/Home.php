@@ -17,4 +17,17 @@ class Home extends BaseController
 	public function login(){
 		return view('log_user/login');
 	}
+
+	public function triathlon_unesa(){
+		return view('utama/comp_triathlon');
+	}
+
+	public function duathlon_unesa(){
+		return view('utama/comp_duathlon');
+	}
+
+	public function gallery(){
+		return view('utama/unesa_gallery');
+	}
+
 }
