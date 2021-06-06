@@ -8,6 +8,9 @@ class InvoiceModel extends Model{
         'id_invoice',
         'no_ktp',
         'id_paket',
-        'status'
+        'status',
+        'age_group',
+        'bukti_bayar',
+        'harga'
     ];
 }

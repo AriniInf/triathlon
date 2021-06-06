@@ -44,6 +44,8 @@ $routes->get('/paket','Paket::index');
 $routes->get('/dashboard','Dashboard::index');
 $routes->post('/post-register','Register::save');
 $routes->post('/post-login','Login::auth');
+$routes->post('/daftar', 'Invoice::addInvoice');
+$routes->post('/invoice', 'Invoice::index');
 
 $routes->get('/triathlon_unesa', 'Home::triathlon_unesa');
 $routes->get('/duathlon_unesa','Home::duathlon_unesa');

@@ -9,18 +9,27 @@ class Invoice extends Controller
 {
     public function index(){
         $invoice = new InvoiceModel();
-        $data['invoice'] = $invoice->findAll();
+        $users = new UserModel();
+        $session = session();
+        $user = $session->get('no_ktp');
+        $data['users'] = $users->where('no_ktp', $user)->findAll();
+        $data['invoice'] = $invoice->where('no_ktp', $user)->findAll();
         return view('invoice', $data);
     }
      public function addInvoice(){
         $invoice = new InvoiceModel();
-        $no_ktp = $session->get('no_ktp');
+        $session = session();
+        $user = $session->get('no_ktp');
+        $id_invoice = uniqid();
         $data = [
-            'id_invoice' = 1,
-            'no_ktp' = $no_ktp,
-            'id_paket' = $this->request->getVar('id_paket'),
-            'status' = 0
+            'id_invoice' => $id_invoice,
+            'no_ktp' => $user,
+            'id_paket' => $this->request->getVar('id_paket'),
+            'harga' => $this->request->getVar('harga'),
+            'age_group' => $this->request->getVar('age_group'),
+            'status' => 0
         ];
+        echo $this->request->getVar('age_group');
         $invoice->insert($data);
         echo 'berhasil';
      }

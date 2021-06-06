@@ -8,7 +8,7 @@ class Paket extends Controller
 
     public function index(){
         $session = session();
-        $session->get('nama_panjang');
+        $data['user'] = $session->get('no_ktp');
         $paket = new PaketModel();
         $data['paket'] = $paket->findAll();
         return view('paket', $data);
