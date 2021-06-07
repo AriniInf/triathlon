@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Unesa Triathlon</title>
+  <title>Jaya Sport Industri</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -26,114 +26,51 @@
   <link rel="stylesheet" href=" <?= base_url('asset/dist/css/skins/_all-skins.min.css') ?>">
   <script src=" <?= base_url('asset/bower_components/datatables.net/js/jquery.dataTables.min.js') ?>"></script>
   
-
+  
+  <link rel="stylesheet" href=" <?= base_url('asset/css/style.css') ?>">
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition skin-red sidebar-mini">
+<body class="hold-transition skin-red sidebar-mini" id="ranking-men">
 
-<style type="text/css">
 
-</style>
-<!-- Site wrapper -->
-<div class="wrapper">
-  <header class="main-header">
-    <!-- Logo -->
-    <a href="#" class="logo" style="a:hover { background-color:#006db9; }">
-      <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>UT</b></span>
-      <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>UNESA </b>Triathlon</span>
-    </a>
-    <!-- Header Navbar: style can be found in header.less -->
-    <nav class="navbar navbar-static-top">
-      <!-- Sidebar toggle button-->
-      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </a>
 
-      <div class="navbar-custom-menu">
-        <ul class="nav navbar-nav">
-       	  <li>
-          	<h5 style="margin: 16px 29px;color: white"><strong>Hi, Kalina (Admin1)</strong></h5>
-       	  </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Left side column. contains the sidebar -->
-  <aside class="main-sidebar">
-    <!-- sidebar: style can be found in sidebar.less -->
-    <section class="sidebar">
-      <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">MAIN NAVIGATION</li>
-
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-table"></i> <span>Dashboard Rekap</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="<?= base_url('/dashboard-admin') ?>"><i class="fa fa-circle-o"></i> Jaya Sport Industri</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="<?php echo site_url("login/logout"); ?>"><i class="fa fa-sign-out"></i> <span>Logout</span>
-          </a>
-        </li>
-      </ul>
-    </section>
-    <!-- /.sidebar -->
-  </aside>
-
-  <!-- Content Wrapper. Contains page content -->
- <div class="content-wrapper">
     <!-- Content Header (Page header) -->
    
       
     <!-- Main content -->
 
- <section class="content-header">
-   <h1>
-     Data Pendaftaran
-   </h1>
- </section>
+    <section class="content-header">
+     <div class="row">
+       <div class="col col-sm-1">
+        <a href="<?= base_url('') ?>"><img src="<?= base_url('assets/img/prev2.png') ?>" class="text-center" alt="back" style="width:40px;height:40px;margin-top: 15px"></a>
+       </div class="col col-sm-11">
+       <div> 
+         <h2 style="color: white"><strong>Women Ranking</strong></h2>
+       </div>
+     </div>
+    </section>
 
  <section class="content">
    <div class="row">
      <div class="col-xs-12">
        <div class="box">  
          <div class="box-body" style="overflow-y:scroll">
-           <table id="example2" class="table table-striped table-bordered bg-danger table-hover text-center">
+            <table id="example2" class="table table-striped table-bordered bg-danger table-hover text-center">
              <thead>
                <tr>
-                <th>No</th>
-                
+                <th>Rank</th>
                 <th>Full Name</th>
-                <th>Email</th>
-                <th>Phone Number</th>
-                <th>Address</th>
-
-                <th>Package</th>
-                <th>Category</th>
-                <th>Jersey Size</th>
-                <th>Total</th>
-
-                <th>Photo</th>
-
-                <th>Action</th>
+                <th>Bib Name</th>
+                <th>YOB</th>
+                <th>NOC</th>
+                <th>Point</th>
+                <th>Event</th>
                </tr>
              </thead>
              <tbody> 
                       
                 <tr>
-                 <td>1</td>
                  <td id="x">Lala</td>
                  <td id="y">Yeye</td>
                  <td id="z">Lulu</td>
@@ -141,13 +78,6 @@
                  <td id="y">Yeye</td>
                  <td id="z">Lulu</td>
                  <td id="x">Lala</td>
-                 <td id="y">Yeye</td>
-                 <td id="z">
-                 	<img class="img-responsive" src="<?= base_url('assets/img/iccom.png') ?>" alt="logo1" style="max-height: 90px;">
-                 </td>
-                 <td>
-                 	<a data-toggle="modal" data-target="#modal-edit"> <em class="btn btn-sm btn-danger btn-create">Konfirmasi</em></a> 
-                 </td>
                </tr>
           
              </tbody>
@@ -166,16 +96,8 @@
  </style>
     
     <!-- /.content -->
-</div>
-  <!-- /.content-wrapper -->
 
-  <footer class="main-footer">
-    <center><strong>Copyright &copy; 2021 <a href="#">Jaya Sport Industri</a>.</strong> All rights
-    reserved.</center>
-  </footer>
-   
-  <div class="control-sidebar-bg"></div>
-</div>
+
 <!-- ./wrapper -->
 
 <!-- jQuery 3 -->

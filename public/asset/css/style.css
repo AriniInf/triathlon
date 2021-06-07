@@ -1,6 +1,10 @@
 body {
 	margin:  0;
 }
+
+#ranking-men{
+	background-image:linear-gradient( rgba(224, 141, 63, 0.527), rgba(0,0,0,0.52)), url('../img/rankmen.jpg');
+}
 .form-v10{
 	background: #ff9d5c;
 	background-repeat: no-repeat;
