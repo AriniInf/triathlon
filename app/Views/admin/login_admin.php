@@ -20,7 +20,7 @@
 <body class="form-v10">
 	<div style="text-align: center;margin-top: 30px">
 		<img class="img-responsive" src="<?= base_url('assets/img/iccom.png') ?>" alt="logo1" style="max-height: 80px;">
-		<h2>Unesa Triathlon 2021</h2>
+		<h2>Jaya Sport Industri</h2>
 	</div>
 
 	<div class="page-content">

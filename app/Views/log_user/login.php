@@ -21,7 +21,7 @@
 
 	<div class="page-content" style="">
 <!-- 		<div>
-			<h3>Login Unesa Triathlon 2021</h3>
+			<h3>Login Jaya Sport Industri</h3>
 		</div> -->
 		
 		<div class="form-v10-content">

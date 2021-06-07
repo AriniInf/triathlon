@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Unesa Triathlon 2021</title>
+  <title>Jaya Sport Industri</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -81,7 +81,7 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="container" data-aos="fade-in">
-      <h1>Unesa Triathlon 2021</h1>
+      <h1>Jaya Sport Industri</h1>
       <div class="d-flex align-items-center">
         <i class="bx bxs-right-arrow-alt get-started-icon"></i>
         <a href="<?= base_url('home/register') ?>" class="btn-get-started scrollto">Register</a>
@@ -110,25 +110,31 @@
 
         <div class="row">
           <div class="col-lg-4 col-md-6" data-aos="fade-up">
+            <a href="<?= base_url('rank-men') ?>">
             <div class="icon-box">
               <div class="icon"><i class="icofont-settings"></i></div>
-              <h4 class="title"><a href="">Man</a></h4>
-              <p class="description">Look Rank Triathlon here ini diisi apa ya allah huhuhu bertanya siapa ok tanya mba dita besoook</p>
+              <h4 class="title">Men</h4>
+              <p class="description" style="color: #313030;font-family: Open Sans, sans-serif">Look Rank Triathlon here ini diisi apa ya allah huhuhu bertanya siapa ok tanya mba dita besoook</p>
             </div>
+            </a>
           </div>
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <a href="<?= base_url('rank-women') ?>">
             <div class="icon-box">
               <div class="icon"><i class="icofont-chart-bar-graph"></i></div>
-              <h4 class="title"><a href="">Woman</a></h4>
-              <p class="description">Minim veniam, Look Rank Triathlon here ini diisi apa ya allah huhuhu bertanya siapa ok tanya mba dita besoook pokonya ok</p>
+              <h4 class="title">Women</h4>
+              <p class="description" style="color: #313030;font-family: Open Sans, sans-serif">Minim veniam, Look Rank Triathlon here ini diisi apa ya allah huhuhu bertanya siapa ok tanya mba dita besoook pokonya ok</p>
             </div>
+            </a>
           </div>
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <a href="#">
             <div class="icon-box">
               <div class="icon"><i class="icofont-tasks-alt"></i></div>
-              <h4 class="title"><a href="">Rank Criteria</a></h4>
-              <p class="description">Look Rank Triathlon here ini diisi apa ya allah huhuhu bertanya siapa ok tanya mba dita besoook</p>
+              <h4 class="title">Rank Criteria</h4>
+              <p class="description" style="color: #313030;font-family: Open Sans, sans-serif">Look Rank Triathlon here ini diisi apa ya allah huhuhu bertanya siapa ok tanya mba dita besoook</p>
             </div>
+            </a>
           </div>
 
         </div>
@@ -148,7 +154,7 @@
           <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
             <h4 data-aos="fade-up">About us</h4>
             <h3 data-aos="fade-up">BACKGROUND</h3> <br>
-            <p data-aos="fade-up" style="padding-bottom: 100px;font-size: 23px">UNESA Triathlon 2021 aims to develop Triathlon<br><br>  sports in terms of research, development, and <br><br> service practitioners in accordance with UNESA <br><br> Higher Education Tri Dharma Philosophy that <br><br> Triathlon sports can be better known from the local<br><br> , national, and international levels.</p>
+            <p data-aos="fade-up" style="padding-bottom: 100px;font-size: 23px">Jaya Sport Industri aims to develop Triathlon<br><br>  sports in terms of research, development, and <br><br> service practitioners in accordance with UNESA <br><br> Higher Education Tri Dharma Philosophy that <br><br> Triathlon sports can be better known from the local<br><br> , national, and international levels.</p>
 
 
           </div>

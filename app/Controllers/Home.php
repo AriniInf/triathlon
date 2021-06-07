@@ -30,4 +30,11 @@ class Home extends BaseController
 		return view('utama/unesa_gallery');
 	}
 
+	public function rank_men(){
+		return view('utama/rank-men');
+	}
+	public function rank_women(){
+		return view('utama/rank-women');
+	}
+
 }

@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Unesa Triathlon 2021</title>
+  <title>Jaya Sport Industri</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -64,7 +64,7 @@
           <li><a href="https://www.triathlon.org/">World Triathlon</a></li>
           <li class="drop-down"><a href="#">Gallery</a>
             <ul>
-              <li><a href="<?= base_url('gallery') ?>">Unesa Triathlon 2021</a></li>
+              <li><a href="<?= base_url('gallery') ?>">Jaya Sport Industri</a></li>
             </ul>
           </li>
           <li><a href="#team">Ranking</a></li>
