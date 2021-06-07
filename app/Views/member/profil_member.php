@@ -94,8 +94,6 @@
                             else if($invoice['status']==2){ ?>
                               <p class="proile-rating">STATUS : <span style="background-color: #d6cac9">Aktif</span></p>  
                             <?php } ?>
-                           
-
                         </div>
                     </div>
                     <div class="col-md-6">
