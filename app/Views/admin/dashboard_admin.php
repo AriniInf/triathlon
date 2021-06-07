@@ -130,26 +130,26 @@
                 <th>Action</th>
                </tr>
              </thead>
-             <tbody> 
-                      
-                <tr>
-                 <td>1</td>
-                 <td id="x">Lala</td>
-                 <td id="y">Yeye</td>
-                 <td id="z">Lulu</td>
-                 <td id="x">Lala</td>
-                 <td id="y">Yeye</td>
-                 <td id="z">Lulu</td>
-                 <td id="x">Lala</td>
-                 <td id="y">Yeye</td>
-                 <td id="z">
-                 	<img class="img-responsive" src="<?= base_url('assets/img/iccom.png') ?>" alt="logo1" style="max-height: 90px;">
-                 </td>
-                 <td>
-                 	<a data-toggle="modal" data-target="#modal-edit"> <em class="btn btn-sm btn-danger btn-create">Konfirmasi</em></a> 
-                 </td>
-               </tr>
-          
+             <tbody>          
+              <tr>
+                <?php $no = 1; foreach($invoice as $row){ ?>
+                  <td><?php $no++ ?></td>
+                  <td id="x"><?= $row['no_ktp'] ?></td>
+                  <td id="y">Yeye</td>
+                  <td id="z">Lulu</td>
+                  <td id="x">Lala</td>
+                  <td id="y"><?= $row['id_paket'] ?></td>
+                  <td id="z">Lulu</td>
+                  <td id="x">Lala</td>
+                  <td id="y"><?= $row['harga'] ?></td>
+                  <td id="z">
+                    <img class="img-responsive" src="<?= base_url('assets/img/iccom.png') ?>" alt="logo1" style="max-height: 90px;">
+                  </td>
+                  <td>
+                    <a data-toggle="modal" data-target="#modal-edit"> <em class="btn btn-sm btn-danger btn-create">Konfirmasi</em></a> 
+                  </td>
+                <?php } ?>
+              </tr>
              </tbody>
            </table>
          </div>

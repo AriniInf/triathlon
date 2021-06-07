@@ -2,6 +2,7 @@
  
 use CodeIgniter\Controller;
 use App\Models\AdminModel;
+use App\Models\InvoiceModel;
 
 class Admin extends Controller
 {
@@ -42,6 +43,8 @@ class Admin extends Controller
     public function dashboard_admin(){
         $session = session();
         $data['admin'] = $session->get('nama');
+        $invoice = new InvoiceModel();
+        $data['invoice'] = $invoice->where('status',1)->findAll();
     	return view('admin/dashboard_admin',$data);
     }
  
