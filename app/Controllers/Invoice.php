@@ -33,5 +33,37 @@ class Invoice extends Controller
         $invoice->insert($data);
         echo 'berhasil';
      }
+
+     public function uploadBukti(){
+        $invoice = new InvoiceModel();
+        $session = session();
+        $user = $session->get('no_ktp');
+        $id = $this->request->getVar('id_invoice');
+        if (!$this->validate([
+			'berkas' => [
+				'rules' => 'uploaded[berkas]|mime_in[berkas,image/jpg,image/jpeg,image/png]|max_size[berkas,2048]',
+				'errors' => [
+					'uploaded' => 'Harus Ada File yang diupload',
+					'mime_in' => 'File Extention Harus Berupa jpg,jpeg,png',
+					'max_size' => 'Ukuran File Maksimal 2 MB'
+				]
+			]
+		])) {
+			session()->setFlashdata('error', $this->validator->listErrors());
+			return redirect()->back()->withInput();
+		}
+
+		$dataBerkas = $this->request->getFile('berkas');
+		$fileName = $dataBerkas->getName();
+		$data = [
+			'berkas' => $fileName,
+			'keterangan' => $this->request->getPost('keterangan')
+        ];
+
+        $data->update($id,$data);
+		$dataBerkas->move('uploads/bukti_bayar/', $fileName);
+		session()->setFlashdata('success', 'Berkas Berhasil diupload');
+		return redirect()->to(base_url('berkas'));
+     }
     
 }

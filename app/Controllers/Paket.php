@@ -10,8 +10,16 @@ class Paket extends Controller
         $session = session();
         $data['user'] = $session->get('no_ktp');
         $paket = new PaketModel();
-        $data['paket'] = $paket->findAll();
-        return view('paket', $data);
+        $data['paket'] = $paket->where('id_competition', 1)->findAll();
+        return view('paket_duathlon', $data);
+    }
+
+    public function triathlon(){
+        $session = session();
+        $data['user'] = $session->get('no_ktp');
+        $paket = new PaketModel();
+        $data['paket'] = $paket->where('id_competition', 2)->findAll();
+        return view('paket_triathlon', $data);
     }
 
 }
