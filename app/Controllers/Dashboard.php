@@ -1,14 +1,26 @@
 <?php namespace App\Controllers;
  
 use CodeIgniter\Controller;
- 
+use App\Models\UserModel;
+use App\Models\InvoiceModel;
+
 class Dashboard extends Controller
 {
     public function index()
     {
+        $users = new UserModel();
+        $invoice = new InvoiceModel();
         $session = session();
-        // echo "Welcome back, ".$session->get('nama_panjang');
-        return view('member/profil_member');
+        $user = $session->get('no_ktp');
+        $data['users'] = $users->where('no_ktp', $user)->findAll();
+        $data['invoice'] = $invoice->where('no_ktp', $user)->first();
+        // if($data){
+        //     $status = $data['status'];
+        // }
+        // else{
+        //     echo 'Tidak Aktif';
+        // }
+        return view('member/profil_member', $data);
     }
 
     public function pembayaran()

@@ -27,7 +27,7 @@
 		
 		<div class="form-v10-content">
 			
-			<form class="form-detail" action="#" method="post" id="myform">
+			<form class="form-detail" action="/post-login-admin" method="post" id="myform">
 
 				<div class="form-right" class="center">
 

@@ -79,12 +79,23 @@
 
 <div class="container emp-profile">
           <!--   <form method="post"> -->
+          <?php foreach($users as $row){ ?> 
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-img">
                             <h3>Welcome,</h3>
-                            <h3 style="color: #ff5821">Chaniyah Zulfa M</h3>
-                            <p class="proile-rating">STATUS : <span style="background-color: #d6cac9">Tidak aktif</span></p>    
+                            <h3 style="color: #ff5821"><?= $row['nama_panjang'] ?></h3>
+                            <?php if($invoice['status']==0){ ?>
+                              <p class="proile-rating">STATUS : <span style="background-color: #d6cac9">Belum Bayar</span></p>  
+                            <?php } 
+                            elseif($invoice['status']==1){ ?>
+                              <p class="proile-rating">STATUS : <span style="background-color: #d6cac9">Menunggu Konfirmasi</span></p>  
+                            <?php }
+                            else if($invoice['status']==2){ ?>
+                              <p class="proile-rating">STATUS : <span style="background-color: #d6cac9">Aktif</span></p>  
+                            <?php } ?>
+                           
+
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -123,7 +134,7 @@
                                                 <label>Full Name</label>
                                             </div>
                                             <div class="col-md-8">
-                                                <p>Chaniyah Zulfa M</p>
+                                                <p><?= $row['nama_panjang'] ?></p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -131,7 +142,7 @@
                                                 <label>Nick Name</label>
                                             </div>
                                             <div class="col-md-8">
-                                                <p>Chan</p>
+                                                <p><?= $row['nama_panggilan'] ?></p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -139,7 +150,7 @@
                                                 <label>Email</label>
                                             </div>
                                             <div class="col-md-8">
-                                                <p>kshitighelani@gmail.com</p>
+                                                <p><?= $row['email'] ?></p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -234,7 +245,7 @@
       <!--       </form>    -->        
         </div>
 
-
+        <?php }?> 
         <div class="container">
          <!-- The Modal -->
 

@@ -1,1 +1,1 @@
-Hai ku dash admin
+Hai aku <?php echo $admin ?>

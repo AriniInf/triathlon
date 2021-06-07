@@ -35,7 +35,7 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 
 $routes->get('/home/register', 'Home::register');
-$routes->get('/home.login', 'Home::login');
+$routes->get('/home/login', 'Home::login');
 $routes->get('/logout', 'Login::logout');
 
 $routes->get('/register','Register::index');
@@ -56,6 +56,7 @@ $routes->get('/dashboard_pembayaran','Dashboard::pembayaran');
 
 $routes->get('/login-admin', 'Admin::index');
 $routes->get('/dashboard-admin', 'Admin::dashboard_admin');
+$routes->post('/post-login-admin','Admin::auth');
 
 
 
