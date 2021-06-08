@@ -11,6 +11,7 @@ class InvoiceModel extends Model{
         'status',
         'age_group',
         'bukti_bayar',
-        'harga'
+        'harga',
+        'tanggal'
     ];
 }

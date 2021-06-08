@@ -137,7 +137,7 @@
                                                         </thead>
                                                         <tbody>
                                                             <tr>
-                                                                <td>Triathlon Elite</td>
+                                                                <td><?= $competition['nama_competition'] ?></td>
                                                                 <td class="text-xs-right">Rp.<?= $invoice['harga'] ?></td>
                                                             </tr>
                                                             <tr>
@@ -167,9 +167,12 @@
                                     </div>
                                   </div>
                                   <br>
-                                  <form action="/action_page.php">
+                                  <?= $invoice['id_invoice'] ?>
+
+                                  <form method="post" action="/upload-bukti" enctype="multipart/form-data">
                                     <div class="custom-file mb-3">
-                                      <input type="file" class="custom-file-input" id="customFile" name="filename">
+                                      <input type="text" value="<?= $invoice['id_invoice'] ?>" name="id_invoice"> 
+                                      <input type="file" class="custom-file-input" id="customFile" name="berkas">
                                       <label class="custom-file-label" for="customFile">Choose file</label>
                                     </div>
                                     
@@ -177,9 +180,15 @@
                                       <button type="submit" class="btn btn-oren float-right">Submit</button>
                                     </div>
                                   </form>
+                                  	
                                 <?php }  
                                 else if($invoice['status']==1){ ?>
                                 <?php } ?>
+                                <?php if(session()->getFlashdata('msg')):?>
+                                    <div class="form-row">
+                                        <div class="alert alert-danger"><?= session()->getFlashdata('msg') ?></div>							     	
+                                    </div>
+                                  <?php endif;?>
 
                               </div>
 

@@ -221,7 +221,7 @@
                                                           </thead>
                                                           <tbody>
                                                               <tr>
-                                                                  <td>Triathlon Elite</td>
+                                                                  <td><?= $competition['nama_competition'] ?></td>
                                                                   <td class="text-xs-right">Rp.<?= $invoice['harga'] ?></td>
                                                               </tr>
                                                               <tr>

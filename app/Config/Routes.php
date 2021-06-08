@@ -46,6 +46,7 @@ $routes->get('/dashboard','Dashboard::index');
 $routes->post('/post-register','Register::save');
 $routes->post('/post-login','Login::auth');
 $routes->post('/daftar', 'Invoice::addInvoice');
+$routes->post('/upload-bukti', 'Invoice::uploadBukti');
 $routes->post('/invoice', 'Invoice::index');
 
 $routes->get('/gallery','Home::gallery');

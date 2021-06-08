@@ -27,7 +27,8 @@ class Invoice extends Controller
             'id_paket' => $this->request->getVar('id_paket'),
             'harga' => $this->request->getVar('harga'),
             'age_group' => $this->request->getVar('age_group'),
-            'status' => 0
+            'status' => 0,
+            'tanggal' => date('Y-m-d')
         ];
         echo $this->request->getVar('age_group');
         $invoice->insert($data);
@@ -35,10 +36,18 @@ class Invoice extends Controller
      }
 
      public function uploadBukti(){
-        $invoice = new InvoiceModel();
+        
+        $users = new UserModel();
         $session = session();
         $user = $session->get('no_ktp');
+        $users = $users->where('no_ktp', $user)->first();
+        $nama = $users['nama_panjang'];
+        
         $id = $this->request->getVar('id_invoice');
+        $invoiceModel = new InvoiceModel();
+        $dataBerkas = $this->request->getFile('berkas');
+		$fileName = date('d-m-Y').'-'.$nama.'.'.$dataBerkas->getClientExtension();
+
         if (!$this->validate([
 			'berkas' => [
 				'rules' => 'uploaded[berkas]|mime_in[berkas,image/jpg,image/jpeg,image/png]|max_size[berkas,2048]',
@@ -49,21 +58,20 @@ class Invoice extends Controller
 				]
 			]
 		])) {
-			session()->setFlashdata('error', $this->validator->listErrors());
+			session()->setFlashdata('msg', $this->validator->listErrors());
 			return redirect()->back()->withInput();
 		}
 
-		$dataBerkas = $this->request->getFile('berkas');
-		$fileName = $dataBerkas->getName();
-		$data = [
-			'berkas' => $fileName,
-			'keterangan' => $this->request->getPost('keterangan')
+        $data = [
+			'bukti_bayar' => $fileName,
+            'status' => 1
         ];
+        echo $id;
 
-        $data->update($id,$data);
-		$dataBerkas->move('uploads/bukti_bayar/', $fileName);
-		session()->setFlashdata('success', 'Berkas Berhasil diupload');
-		return redirect()->to(base_url('berkas'));
+        $invoiceModel->update($id, $data);
+		$dataBerkas->move(ROOTPATH . 'public/uploads/bukti_bayar/', $fileName);
+		session()->setFlashdata('msg', 'Berkas Berhasil diupload');
+		return redirect()->back();
      }
     
 }
