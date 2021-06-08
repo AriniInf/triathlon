@@ -12,15 +12,24 @@ class Dashboard extends Controller
         $invoice = new InvoiceModel();
         $session = session();
         $user = $session->get('no_ktp');
-        $data['users'] = $users->where('no_ktp', $user)->findAll();
-        $data['invoice'] = $invoice->where('no_ktp', $user)->first();
-        // if($data){
-        //     $status = $data['status'];
-        // }
-        // else{
-        //     echo 'Tidak Aktif';
-        // }
-        return view('member/profil_member', $data);
+        $data['users'] = $users->where('no_ktp', $user)->first();
+        $invoice = $invoice->where('no_ktp', $user)->first();
+        $data['invoice'] = $invoice;
+        if($invoice){
+            if($invoice['status'] == 2){
+                return view('member/dash_lunas', $data);
+
+            }
+            else if($invoice['status']==3){
+                return view('member/dash_tolakupload',$data);
+            }
+            else{
+                return view('member/dash_pembayaran',$data);
+            }
+        }
+        else{
+            return view('member/dash_tidakaktif',$data);
+        }
     }
 
     public function pembayaran()

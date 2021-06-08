@@ -78,7 +78,7 @@
                     <div class="col-md-4">
                         <div class="profile-img">
                             <h3>Welcome,</h3>
-                            <h3 style="color: #ff5821">Chaniyah Zulfa M</h3>
+                            <h3 style="color: #ff5821"><?= $users['nama_panjang'] ?></h3>
                          <!--    <p class="proile-rating">STATUS : <span style="background-color: #d6cac9">Tidak aktif</span></p>     -->
                         </div>
                     </div>

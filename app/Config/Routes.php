@@ -48,8 +48,6 @@ $routes->post('/post-login','Login::auth');
 $routes->post('/daftar', 'Invoice::addInvoice');
 $routes->post('/invoice', 'Invoice::index');
 
-$routes->get('/triathlon_unesa', 'Home::triathlon_unesa');
-$routes->get('/duathlon_unesa','Home::duathlon_unesa');
 $routes->get('/gallery','Home::gallery');
 
 $routes->get('/dashboard_pembayaran','Dashboard::pembayaran');

@@ -111,7 +111,7 @@
                     <div class="col-md-4">
                         <div class="profile-img">
                             <h3>Welcome,</h3>
-                            <h3 style="color: #ff5821">Chaniyah Zulfa M</h3>  
+                            <h3 style="color: #ff5821"><?= $users['nama_panjang'] ?></h3>  
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -144,7 +144,7 @@
                                               <i class="fa fa-search-plus float-xs-left icon"></i>
                                             <div class="row">
                                               <div class="col-md-8">
-                                                <h2>Registration-ID #33221</h2>
+                                                <h2>Registration-ID #<?= $invoice['id_invoice'] ?></h2>
                                               </div>
                                               <div class="col-md-4">
                                                 <p class="proile-rating text-right" style="font-size: 20px;color: #313030">Status :  <span class="badge badge-success" style="color: white">Aktif</span>
@@ -171,7 +171,7 @@
                                                         <label>Full Name</label>
                                                     </div>
                                                     <div class="col-md-8">
-                                                        <p style="color: black">Lala Lita</p>
+                                                        <p style="color: black"><?= $users['nama_panjang'] ?></p>
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -179,7 +179,7 @@
                                                         <label>Email</label>
                                                     </div>
                                                     <div class="col-md-8">
-                                                        <p style="color: black">lita@gmail.com</p>
+                                                        <p style="color: black"><?= $users['email'] ?></p>
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -187,7 +187,7 @@
                                                         <label>Phone</label>
                                                     </div>
                                                     <div class="col-md-8">
-                                                        <p style="color: black">081216831244</p>
+                                                        <p style="color: black"><?= $users['no_hp'] ?></p>
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -195,7 +195,7 @@
                                                         <label>Address</label>
                                                     </div>
                                                     <div class="col-md-8">
-                                                        <p style="color: black">Jl. Tropodo Indah Blok E/2, Tropodo, Waru, Sidoarjo 61271</p>
+                                                        <p style="color: black"><?= $users['alamat'] ?></p>
                                                     </div>
                                                 </div>
                                               </div>
@@ -222,7 +222,7 @@
                                                           <tbody>
                                                               <tr>
                                                                   <td>Triathlon Elite</td>
-                                                                  <td class="text-xs-right">Rp.300.000</td>
+                                                                  <td class="text-xs-right">Rp.<?= $invoice['harga'] ?></td>
                                                               </tr>
                                                               <tr>
                                                                   <td>Jersey</td>
@@ -231,7 +231,7 @@
 
                                                               <tr>
                                                                   <td class="emptyrow text-xs-center"><strong>Total</strong></td>
-                                                                  <td class="emptyrow text-xs-right">Rp.300.000</td>
+                                                                  <td class="emptyrow text-xs-right">Rp.<?= $invoice['harga'] ?></td>
                                                               </tr>
                                                           </tbody>
                                                       </table>
