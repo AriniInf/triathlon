@@ -103,63 +103,18 @@
                     <div class="col-md-8">
                         <div class="tab-content profile-tab" id="myTabContent">
                             <div class="tab-pane fade show active" role="tabpanel">
-                              <!-- isi content -->
+                            	<!-- isi content -->
 
                                 <div class="container">
-                                  <p class="proile-rating  text-right" style="font-size: 20px;color: #313030">Status :  <span class="badge badge-dark" style="color: white">Belum Bayar</span>
+                                  <p class="proile-rating  text-right" style="font-size: 20px;color: #313030">Status :  <span class="badge badge-danger" style="color: white">Upload Ditolak</span>
                                   </p>
-                                <!--   <p class="proile-rating  text-right" style="font-size: 20px;color: #313030">Status :  <span class="badge badge-primary" style="color: white">Menunggu Konfirmasi</span>
-                                  </p> -->
                                 </div>
 
                               <div class="container">
-
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="card ">
-                                          <div class="card-header bg-oren">
-                                              <h4 class="text-xs-center" style="color: white"><strong>Order Summary</strong></h4>
-                                          </div>
-                                            <div class="card-block">
-                                                <div class="table-responsive">
-                                                    <table class="table table-sm">
-                                                        <thead>
-                                                            <tr>
-                                                                <td><strong>Package Competition</strong></td>
-                                                                <td class="text-xs-right"><strong>Price</strong></td>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>Triathlon Elite</td>
-                                                                <td class="text-xs-right">Rp.300.000</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Jersey</td>
-                                                                <td class="text-xs-right">Rp.0</td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td class="emptyrow text-xs-center"><strong>Total</strong></td>
-                                                                <td class="emptyrow text-xs-right">Rp.300.000</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><br>
-
                                 <div class="card bg-oren">
-                                  <div class="card-body" style="color: white;font-size: 15px">
-                                    <h6>Silahkan membayar ke rekening berikut :</h6><br>
-                                    <center><h6>BNI : 10387178368176<br>BRI : 861371567135<br></h6></center><br>
-                                    <h6>Setelah membayar, silahkan upload bukti bayar dan tunggu notifikasi dari email pembayaran berhasil</h6>
-                                  </div>
+                                  <div class="card-body"><center><h6 style="color: white;font-size: 15px">Bukti yang dikirimkan ditolak<br>Silahkan mengirim bukti transfer kembali dengan jelas</h6></center></div>
                                 </div>
                                 <br>
-
                                 <form action="/action_page.php">
                                   <div class="custom-file mb-3">
                                     <input type="file" class="custom-file-input" id="customFile" name="filename">
@@ -170,7 +125,6 @@
                                     <button type="submit" class="btn btn-oren float-right">Submit</button>
                                   </div>
                                 </form>
-
                               </div>
 
                   

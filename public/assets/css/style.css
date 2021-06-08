@@ -26,6 +26,17 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
 
+.bg-oren{
+  background-color: #ff5821;
+}
+.bg-ijo{
+  background-color:  #7ae83f;
+}
+.btn-oren{
+ background-color: #ff5821;
+ color: white; 
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/

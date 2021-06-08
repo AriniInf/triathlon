@@ -25,7 +25,10 @@ class Dashboard extends Controller
 
     public function pembayaran()
     {
-    	return view('member/dash_pembayaran');
+    	// return view('member/dash_pembayaran');
+        return view('member/dash_lunas');
+        // return view('member/dash_tidakaktif');
+        // return view('member/dash_tolakupload');
     }
 
 }
