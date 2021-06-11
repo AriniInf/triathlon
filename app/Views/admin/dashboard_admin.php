@@ -3,28 +3,28 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Unesa Triathlon</title>
+  <title>Dahboard Admin</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
 
   <!-- Favicons -->
-  <link href="<?= base_url('assets/img/icbund.png') ?>" rel="icon">
-  <link href="<?= base_url('assets/img/iccom.png') ?>" rel="apple-touch-icon">
+  <link href="assets/img/icbund.png" rel="icon">
+  <link href="assets/img/iccom.png" rel="apple-touch-icon">
   
-  <link rel="stylesheet" href=" <?= base_url('asset/bower_components/bootstrap/dist/css/bootstrap.min.css') ?>">
+  <link rel="stylesheet" href="asset/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href=" <?= base_url('asset/bower_components/font-awesome/css/font-awesome.min.css') ?>">
+  <link rel="stylesheet" href="asset/bower_components/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
-  <link rel="stylesheet" href=" <?= base_url('asset/bower_components/Ionicons/css/ionicons.min.css') ?>">
+  <link rel="stylesheet" href="asset/bower_components/Ionicons/css/ionicons.min.css">
     <!-- DataTables -->
-  <link rel="stylesheet" href=" <?= base_url('asset/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css') ?>"> 
+  <link rel="stylesheet" href="asset/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css"> 
   <!-- Theme style -->
-  <link rel="stylesheet" href=" <?= base_url('asset/dist/css/AdminLTE.min.css') ?>">
+  <link rel="stylesheet" href="asset/dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href=" <?= base_url('asset/dist/css/skins/_all-skins.min.css') ?>">
-  <script src=" <?= base_url('asset/bower_components/datatables.net/js/jquery.dataTables.min.js') ?>"></script>
+  <link rel="stylesheet" href="asset/dist/css/skins/_all-skins.min.css">
+  <script src="asset/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
   
 
   <!-- Google Font -->
@@ -41,9 +41,9 @@
     <!-- Logo -->
     <a href="#" class="logo" style="a:hover { background-color:#006db9; }">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>UT</b></span>
+      <span class="logo-mini"><b>JSI</b></span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>UNESA </b>Triathlon</span>
+      <span class="logo-lg"><b>Jaya </b>Sport Industri</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -80,7 +80,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?= base_url('/dashboard-admin') ?>"><i class="fa fa-circle-o"></i> Jaya Sport Industri</a></li>
+            <li><a href="<?= base_url('/dashboard-admin') ?>"><i class="fa fa-circle-o"></i> Unesa Triathlon 2021</a></li>
           </ul>
         </li>
         <li>
@@ -170,7 +170,7 @@
   <!-- /.content-wrapper -->
 
   <footer class="main-footer">
-    <center><strong>Copyright &copy; 2021 <a href="#">Jaya Sport Industri</a>.</strong> All rights
+    <center><strong>Copyright &copy; 2021 <a href="#">Jaya Sport Industry</a>.</strong> All rights
     reserved.</center>
   </footer>
    
@@ -179,20 +179,20 @@
 <!-- ./wrapper -->
 
 <!-- jQuery 3 -->
-<script src="<?= base_url('asset/bower_components/jquery/dist/jquery.min.js') ?>"></script>
+<script src="asset/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src="<?= base_url('asset/bower_components/bootstrap/dist/js/bootstrap.min.js') ?>"></script>
+<script src="asset/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- SlimScroll -->
-<script src="<?= base_url('asset/bower_components/jquery-slimscroll/jquery.slimscroll.min.js') ?>"></script>
+<script src="asset/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
-<script src="<?= base_url('asset/bower_components/fastclick/lib/fastclick.js') ?>"></script>
+<script src="asset/bower_components/fastclick/lib/fastclick.js"></script>
 <!-- DataTables -->
-<script src="<?= base_url('asset/bower_components/datatables.net/js/jquery.dataTables.min.js') ?>"></script>
-<script src="<?= base_url('asset/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js') ?>"></script>
+<script src="asset/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="asset/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 <!-- AdminLTE App -->
-<script src="<?= base_url('asset/dist/js/adminlte.min.js') ?>"></script>
+<script src="asset/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="<?= base_url('asset/dist/js/demo.js') ?>"></script>
+<script src="asset/dist/js/demo.js"></script>
 <script>
 
 	

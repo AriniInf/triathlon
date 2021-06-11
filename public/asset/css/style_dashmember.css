@@ -37,7 +37,7 @@ body{
     color: #333;
 }
 .profile-head h6{
-    color: #ff5821;
+    color: #e60000;
 }
 .profile-edit-btn{
     border: none;
@@ -67,7 +67,7 @@ body{
 }
 .profile-head .nav-tabs .nav-link.active{
     border: none;
-    border-bottom:2px solid #ff5821;
+    border-bottom:2px solid #e60000;
 }
 .profile-work{
     padding: 14%;
@@ -93,5 +93,5 @@ body{
 }
 .profile-tab p{
     font-weight: 600;
-    color: #ff5821;
+    color: #e60000;
 }

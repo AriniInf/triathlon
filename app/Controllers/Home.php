@@ -36,5 +36,12 @@ class Home extends BaseController
 	public function rank_women(){
 		return view('utama/rank-women');
 	}
+	public function profil(){
+		return view('member/profil_member');
+	}
+
+	public function comp_member(){
+		return view ('member/comp_member');
+	}
 
 }
