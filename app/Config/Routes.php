@@ -64,6 +64,9 @@ $routes->get('/rank-women','Home::rank_women');
 $routes->get('/profil','Home::profil');
 $routes->get('/comp_member','Home::comp_member');
 
+$routes->get('/coba','Coba::index');
+$routes->post('/post-coba', 'Coba::insert_db');
+
 $routes->get('/elite1-tri','Subpaket::elite1_tri');
 $routes->get('/elite2-tri','Subpaket::elite2_tri');
 $routes->get('/elite3-tri','Subpaket::elite3_tri');
