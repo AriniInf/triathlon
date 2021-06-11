@@ -7,13 +7,13 @@
 	<meta content="" name="keywords">
 
 	<!-- Favicons -->
-	<link href="<?= base_url('assets/img/icbund.png') ?>" rel="icon">
-	<link href="<?= base_url('assets/img/iccom.png') ?>" rel="apple-touch-icon">
+	<link href="assets/img/icbund.png" rel="icon">
+	<link href="assets/img/iccom.png" rel="apple-touch-icon">
 	<!-- Font-->
-	<link rel="stylesheet" type="text/css" href="<?= base_url('asset/css/montserrat-font.css') ?>" >
-	<link rel="stylesheet" type="text/css" href="<?= base_url('asset/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css') ?>" >
+	<link rel="stylesheet" type="text/css" href="asset/css/montserrat-font.css" >
+	<link rel="stylesheet" type="text/css" href="asset/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css" >
 	<!-- Main Style Css -->
-    <link rel="stylesheet" href="<?= base_url('asset/css/style.css') ?>" />
+    <link rel="stylesheet" href="asset/css/style.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
 </head>
@@ -21,7 +21,7 @@
 
 	<div class="page-content" style="">
 <!-- 		<div>
-			<h3>Login Jaya Sport Industri</h3>
+			<h3>Login Jaya Sport Industry</h3>
 		</div> -->
 		
 		<div class="form-v10-content">
@@ -32,7 +32,7 @@
 
 						<div class="row">
 						    <div class="col col-sm-1">
-						     <a href="<?= base_url('') ?>"><img src="<?= base_url('assets/img/prev2.png') ?>" class="text-center" alt="back" style="width:40px;height:40px;margin-top: 25px;margin-left: 50px"></a>
+						     <a href="<?= base_url('') ?>"><img src="assets/img/prev2.png" class="text-center" alt="back" style="width:40px;height:40px;margin-top: 25px;margin-left: 50px"></a>
 						    </div>
 						    <div class="col col-sm-11" style="padding-left: 0px;">
 						     <h2>Login</h2>
@@ -51,7 +51,7 @@
 
 						     <div class="form-akhir">
 						     		<input type="submit" name="register" class="register" value="Login" style="margin-bottom: 10px">
-						     		<p style="color: white;margin-top: 10px;font-size: 15px;padding-bottom: 50px">Not a member ? <a href="<?= base_url('home/register') ?>" class="text">Register Now</a></p>
+						     		<p style="color: white;margin-top: 10px;font-size: 15px;padding-bottom: 50px">Not a member ? <a href="<?= base_url('register') ?>" class="text">Register Now</a></p>
 						     </div>
 
 						    </div>

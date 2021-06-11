@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Jaya Sport Industri</title>
+  <title>Jaya Sport Industry</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -35,7 +35,7 @@
   <!-- ======= Header ======= -->
 <style type="text/css">
   .btn-oren{
-    background-color: #FF5821;
+    background-color: #e60000;
   }
 </style>
 
@@ -64,7 +64,7 @@
           <li><a href="https://www.triathlon.org/">World Triathlon</a></li>
           <li class="drop-down"><a href="#">Gallery</a>
             <ul>
-              <li><a href="<?= base_url('gallery') ?>">Jaya Sport Industri</a></li>
+              <li><a href="<?= base_url('gallery') ?>">Jaya Sport Industry</a></li>
             </ul>
           </li>
           <li><a href="#team">Ranking</a></li>

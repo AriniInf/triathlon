@@ -20,6 +20,7 @@ class Paket extends Controller
         $paket = new PaketModel();
         $data['paket'] = $paket->where('id_competition', 2)->findAll();
         return view('paket_triathlon', $data);
+        // return view('utama/comp_triathlon');
     }
 
 }

@@ -61,8 +61,21 @@ $routes->get('/logout', 'Admin::logout');
 $routes->get('/rank-men','Home::rank_men');
 $routes->get('/rank-women','Home::rank_women');
 
+$routes->get('/profil','Home::profil');
+$routes->get('/comp_member','Home::comp_member');
 
+$routes->get('/elite1-tri','Subpaket::elite1_tri');
+$routes->get('/elite2-tri','Subpaket::elite2_tri');
+$routes->get('/elite3-tri','Subpaket::elite3_tri');
+$routes->get('/elite4-tri','Subpaket::elite4_tri');
 
+$routes->get('/ag-tri','Subpaket::ag_tri');
+$routes->get('/kids-tri','Subpaket::kids_tri');
+
+$routes->get('/elite1-dua','Subpaket::elite1_dua');
+$routes->get('/elite2-dua','Subpaket::elite2_dua');
+$routes->get('/elite3-dua','Subpaket::elite3_dua');
+$routes->get('/elite4-dua','Subpaket::elite4_dua');
 
 
 /*
