@@ -61,6 +61,8 @@ $routes->get('/logout', 'Admin::logout');
 $routes->get('/rank-men','Home::rank_men');
 $routes->get('/rank-women','Home::rank_women');
 
+$routes->get('/coba','Coba::index');
+$routes->post('/post-coba', 'Coba::insert_db');
 
 
 

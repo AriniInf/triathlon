@@ -1,16 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- 	Competition nya
-Triathlon
-1. Elite
 
-2. Age Group
-
-3. Kids
-
-
-Duathlon -->
 	<meta charset="utf-8">
 	<title>Register Triathlon</title>
 	<meta content="" name="description">
