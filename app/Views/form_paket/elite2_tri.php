@@ -23,7 +23,11 @@
     <h3 style="color: #e60000;margin-left: 7%">Data Participant 1</h3>
     <a class="btn btn-sm btn-danger at"  onclick="show_atlet()"> Athlete</a>
     <a class="btn btn-sm btn-danger ofc" id="ofc1" onclick="show_official()">Official</a>
-
+        <?php if(session()->getFlashdata('msg')):?>
+        <div class="form-row">
+            <div class="alert alert-danger"><?= session()->getFlashdata('msg') ?></div>							     	
+        </div>
+        <?php endif;?>
     <form id="myform" action="/daftar" method="post">
         <input type="hidden" name="penanda[1]" id="penanda1" value="athlete">
         <input type="hidden" name="penanda[2]" id="penanda2" value="athlete">
@@ -161,32 +165,31 @@
                     <div class="form-left">
 
                         <h2>Personal Information</h2>
-                                <input type="hidden" name="email[]" id="email_ofc1" class="ofc_email" form="myform" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="Email">
-                                <input type="hidden" name="no_ktp[]" class="ktp" id="ktp" form="myform">
-                                <input type="hidden" name="nama_bib[]" class="nama_bib" id="nama_bib"  form="myform">
-                                <input type="hidden" name="kewarganegaraan[]" class="kewarganegaraan" id="kewarganegaraan"  form="myform">
-                                <input type="hidden" name="tanggal_lahir[]" class="tanggal_lahir" id="tanggal_lahir"  form="myform" >
-                                <input type="hidden" name="negara[]" class="negara" id="negara"  form="myform">
-                                <input type="hidden" name="provinsi[]" class="provinsi" id="provinsi"  form="myform">
-                                <input type="hidden" name="kota[]" class="kota" id="kota"  form="myform">
-                                <input type="hidden" name="kecamatan[]" class="kecamatan" id="kecamatan"  form="myform">
-                                <input type="hidden" name="kode_pos[]" class="kode_pos" id="kode_pos" form="myform" >
-                                <input type="hidden" name="alamat[]" class="alamat" id="alamat" form="myform" >
-                                <input type="hidden" name="sex[]" class="sex" id="sex" form="myform" >
-                                <input type="hidden" name="gol_darah[]" class="gol_darah" id="gol_darah"  form="myform">
-                                <input type="hidden" name="nama_komunitas[]" class="nama_komunitas" id="nama_komunitas" form="myform" >
-                                <input type="hidden" name="swim_time_750[]" class="swim_time_750" id="swim_time_750" form="myform" >
-                                <input type="hidden" name="ec_nama[]" class="ec_nama" id="ec_nama" form="myform" >
-                                <input type="hidden" name="ec_email[]" class="ec_email" id="ec_email"form="myform" >
-                                <input type="hidden" name="ec_hp[]" class="ec_hp" id="ec_hp" form="myform">
-                                <input type="hidden" name="ukuran_jersey[]" class="ukuran_jersey" id="ukuran_jersey" form="myform">
+                                <input type="hidden" name="email_ofc[]" id="email_ofc1" class="ofc_email" form="myform" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="Email">
+                                <input type="hidden" name="nama_bib_ofc[]" class="nama_bib" id="nama_bib"  form="myform">
+                                <input type="hidden" name="kewarganegaraan_ofc[]" class="kewarganegaraan" id="kewarganegaraan"  form="myform">
+                                <input type="hidden" name="tanggal_lahir_ofc[]" class="tanggal_lahir" id="tanggal_lahir"  form="myform" >
+                                <input type="hidden" name="negara_ofc[]" class="negara" id="negara"  form="myform">
+                                <input type="hidden" name="provinsi_ofc[]" class="provinsi" id="provinsi"  form="myform">
+                                <input type="hidden" name="kota_ofc[]" class="kota" id="kota"  form="myform">
+                                <input type="hidden" name="kecamatan_ofc[]" class="kecamatan" id="kecamatan"  form="myform">
+                                <input type="hidden" name="kode_pos_ofc[]" class="kode_pos" id="kode_pos" form="myform" >
+                                <input type="hidden" name="alamat_ofc[]" class="alamat" id="alamat" form="myform" >
+                                <input type="hidden" name="sex_ofc[]" class="sex" id="sex" form="myform" >
+                                <input type="hidden" name="gol_darah_ofc[]" class="gol_darah" id="gol_darah"  form="myform">
+                                <input type="hidden" name="nama_komunitas_ofc[]" class="nama_komunitas" id="nama_komunitas" form="myform" >
+                                <input type="hidden" name="swim_time_750_ofc[]" class="swim_time_750" id="swim_time_750" form="myform" >
+                                <input type="hidden" name="ec_nama_ofc[]" class="ec_nama" id="ec_nama" form="myform" >
+                                <input type="hidden" name="ec_email_ofc[]" class="ec_email" id="ec_email"form="myform" >
+                                <input type="hidden" name="ec_hp_ofc[]" class="ec_hp" id="ec_hp" form="myform">
+                                <input type="hidden" name="ukuran_jersey_ofc[]" class="ukuran_jersey" id="ukuran_jersey" form="myform">
 
                                 <div class="form-row">
                                     <input type="text" name="nama_panjang_ofc[]" class="fullname_ofc" id="fullname_ofc1" placeholder="Full Name"form="myform">
                                 </div>
 
                                 <div class="form-row">
-                                    <input type="text" name="nama_panggilan[]" class="nickname_ofc" id="nickname_ofc1" placeholder="Nick Name" form="myform">
+                                    <input type="text" name="nama_panggilan_ofc[]" class="nickname_ofc" id="nickname_ofc1" placeholder="Nick Name" form="myform">
                                 </div>
 
                     </div>
@@ -196,10 +199,10 @@
                         <h2><br></h2>
 
                         <div class="form-row">
-                            <input type="text" name="no_ktp[]" class="ktp" id="ktp_ofc1" form="myform" placeholder="KTP Number">
+                            <input type="text" name="no_ktp_ofc[]" class="ktp" id="ktp_ofc1" form="myform" placeholder="KTP Number">
                         </div>
                         <div class="form-row">
-                            <input type="text" name="no_hp[]" class="ofc_hp" id="no_hp_ofc1" form="myform" placeholder="Phone Number">
+                            <input type="text" name="no_hp_ofc[]" class="ofc_hp" id="no_hp_ofc1" form="myform" placeholder="Phone Number">
                         </div>
                         
 
@@ -279,7 +282,7 @@
 
                         <div class="form-row">
                             <select name="sex[]">
-                                <option value="sex">Sex</option>
+                                <option value="">Sex</option>
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
                             </select>
@@ -289,7 +292,7 @@
                         </div>
                         <div class="form-row">
                             <select name="gol_darah[]">
-                                <option value="gol_darah">Blood Type</option>
+                                <option value="">Blood Type</option>
                                 <option value="A">A</option>
                                 <option value="B">B</option>
                                 <option value="AB">AB</option>
@@ -344,31 +347,31 @@
                     <div class="form-left">
 
                         <h2>Personal Information</h2>
-                                <input type="hidden" name="email[]" id="email_ofc2" class="email_ofc2" form="myform" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="Email">
-                                <input type="hidden" name="nama_bib[]" class="nama_bib" id="nama_bib"  form="myform">
-                                <input type="hidden" name="kewarganegaraan[]" class="kewarganegaraan" id="kewarganegaraan"  form="myform">
-                                <input type="hidden" name="tanggal_lahir[]" class="tanggal_lahir" id="tanggal_lahir"  form="myform" >
-                                <input type="hidden" name="negara[]" class="negara" id="negara"  form="myform">
-                                <input type="hidden" name="provinsi[]" class="provinsi" id="provinsi"  form="myform">
-                                <input type="hidden" name="kota[]" class="kota" id="kota"  form="myform">
-                                <input type="hidden" name="kecamatan[]" class="kecamatan" id="kecamatan"  form="myform">
-                                <input type="hidden" name="kode_pos[]" class="kode_pos" id="kode_pos" form="myform" >
-                                <input type="hidden" name="alamat[]" class="alamat" id="alamat" form="myform" >
-                                <input type="hidden" name="sex[]" class="sex" id="sex" form="myform" >
-                                <input type="hidden" name="gol_darah[]" class="gol_darah" id="gol_darah"  form="myform">
-                                <input type="hidden" name="nama_komunitas[]" class="nama_komunitas" id="nama_komunitas" form="myform" >
-                                <input type="hidden" name="swim_time_750[]" class="swim_time_750" id="swim_time_750" form="myform" >
-                                <input type="hidden" name="ec_nama[]" class="ec_nama" id="ec_nama" form="myform" >
-                                <input type="hidden" name="ec_email[]" class="ec_email" id="ec_email"form="myform" >
-                                <input type="hidden" name="ec_hp[]" class="ec_hp" id="ec_hp" form="myform">
-                                <input type="hidden" name="ukuran_jersey[]" class="ukuran_jersey" id="ukuran_jersey" form="myform">
+                        <input type="hidden" name="email_ofc[]" id="email_ofc2" class="ofc_email" form="myform" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="Email">
+                                <input type="hidden" name="nama_bib_ofc[]" class="nama_bib" id="nama_bib"  form="myform">
+                                <input type="hidden" name="kewarganegaraan_ofc[]" class="kewarganegaraan" id="kewarganegaraan"  form="myform">
+                                <input type="hidden" name="tanggal_lahir_ofc[]" class="tanggal_lahir" id="tanggal_lahir"  form="myform" >
+                                <input type="hidden" name="negara_ofc[]" class="negara" id="negara"  form="myform">
+                                <input type="hidden" name="provinsi_ofc[]" class="provinsi" id="provinsi"  form="myform">
+                                <input type="hidden" name="kota_ofc[]" class="kota" id="kota"  form="myform">
+                                <input type="hidden" name="kecamatan_ofc[]" class="kecamatan" id="kecamatan"  form="myform">
+                                <input type="hidden" name="kode_pos_ofc[]" class="kode_pos" id="kode_pos" form="myform" >
+                                <input type="hidden" name="alamat_ofc[]" class="alamat" id="alamat" form="myform" >
+                                <input type="hidden" name="sex_ofc[]" class="sex" id="sex" form="myform" >
+                                <input type="hidden" name="gol_darah_ofc[]" class="gol_darah" id="gol_darah"  form="myform">
+                                <input type="hidden" name="nama_komunitas_ofc[]" class="nama_komunitas" id="nama_komunitas" form="myform" >
+                                <input type="hidden" name="swim_time_750_ofc[]" class="swim_time_750" id="swim_time_750" form="myform" >
+                                <input type="hidden" name="ec_nama_ofc[]" class="ec_nama" id="ec_nama" form="myform" >
+                                <input type="hidden" name="ec_email_ofc[]" class="ec_email" id="ec_email"form="myform" >
+                                <input type="hidden" name="ec_hp_ofc[]" class="ec_hp" id="ec_hp" form="myform">
+                                <input type="hidden" name="ukuran_jersey_ofc[]" class="ukuran_jersey" id="ukuran_jersey" form="myform">
 
                                 <div class="form-row">
                                     <input type="text" name="nama_panjang_ofc[]" class="fullname_ofc" id="fullname_ofc2" placeholder="Full Name"form="myform">
                                 </div>
 
                                 <div class="form-row">
-                                    <input type="text" name="nama_panggilan[]" class="nickname_ofc" id="nickname_ofc2" placeholder="Nick Name" form="myform">
+                                    <input type="text" name="nama_panggilan_ofc[]" class="nickname_ofc" id="nickname_ofc2" placeholder="Nick Name" form="myform">
                                 </div>
 
                     </div>
@@ -377,10 +380,10 @@
                     <div class="form-right">
                         <h2><br></h2>
                         <div class="form-row">
-                            <input type="text" name="no_ktp[]" class="ktp" id="ktp_ofc2" form="myform" placeholder="KTP Number">
+                            <input type="text" name="no_ktp_ofc[]" class="ktp" id="ktp_ofc2" form="myform" placeholder="KTP Number">
                         </div>
                         <div class="form-row">
-                            <input type="text" name="no_hp[]" class="ofc_hp" id="no_hp_ofc2" form="myform" placeholder="Phone Number" >
+                            <input type="text" name="no_hp_ofc[]" class="ofc_hp" id="no_hp_ofc2" form="myform" placeholder="Phone Number" >
                         </div>
                         
 

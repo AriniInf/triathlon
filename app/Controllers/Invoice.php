@@ -23,71 +23,130 @@ class Invoice extends Controller
         $session = session();
         $user = $session->get('email');
         $id_invoice = 'TRX-'.uniqid();
-        $data = [
-            'id_invoice' => $id_invoice,
-            'email' => $user,
-            'id_sub' => $this->request->getVar('id_sub'),
-            'harga' => $this->request->getVar('harga'),
-            'age_group' => $this->request->getVar('age_group'),
-            'status' => 0,
-            'tanggal_beli' => date('d-m-Y')
+        $rules = [
+            'nama_panjang'         => 'required',
+            'nama_panggilan'      => 'required'
         ];
-        print_r($data);
-        // $invoice->insert($data);
-        $users = array();
-        // $nama_panggilan = $this->request->getVar('nama_panggilan');
-        $penandas = $this->request->getVar('penanda');
+         
+        if($this->validate($rules)){
+            $data = [
+                'id_invoice' => $id_invoice,
+                'email' => $user,
+                'id_sub' => $this->request->getVar('id_sub'),
+                'harga' => $this->request->getVar('harga'),
+                'age_group' => $this->request->getVar('age_group'),
+                'status' => 0,
+                'tanggal_beli' => date('d-m-Y')
+            ];
+            print_r($data);
+            // $invoice->insert($data);
+            $users = array();
+            // $nama_panggilan = $this->request->getVar('nama_panggilan');
+            $penandas = $this->request->getVar('penanda');
 
-        $index = 0; // Set index array awal dengan 0
-        
-        foreach($penandas as $penanda){ 
-            $id = uniqid();
-            // echo $nama;// Kita buat perulangan berdasarkan nis sampai data terakhir
-            if ($penanda == 'athlete') {
-                $nama_panjang = $this->request->getVar('nama_panjang')[$index];
-                # code...
+            $index = 0; // Set index array awal dengan 0
+            
+            foreach($penandas as $penanda){ 
+                $id = uniqid();
+                // echo $nama;// Kita buat perulangan berdasarkan nis sampai data terakhir
+                if ($penanda == 'athlete') {
+                    $nama_panjang = $this->request->getVar('nama_panjang')[$index];
+                    $no_ktp = $this->request->getVar('no_ktp')[$index];
+                    $nama_panggilan = $this->request->getVar('nama_panggilan')[$index];
+                    $no_hp = $this->request->getVar('no_hp')[$index];
+                    $nama_bib = $this->request->getVar('nama_bib')[$index];
+                    $kewarganegaraan = $this->request->getVar('kewarganegaraan')[$index];
+                    $tanggal_lahir = $this->request->getVar('tanggal_lahir')[$index];
+                    $negara = $this->request->getVar('negara')[$index];
+                    $provinsi = $this->request->getVar('provinsi')[$index];
+                    $kota = $this->request->getVar('kota')[$index];
+                    $kecamatan     = $this->request->getVar('kecamatan')[$index];
+                    $kode_pos     = $this->request->getVar('kode_pos')[$index];
+                    $alamat = $this->request->getVar('alamat')[$index];
+                    $sex = $this->request->getVar('sex')[$index];
+                    $gol_darah     = $this->request->getVar('gol_darah')[$index];
+                    $nama_komunitas     = $this->request->getVar('nama_komunitas')[$index];
+                    $swim_time_750 = $this->request->getVar('swim_time_750')[$index];
+                    $ec_nama     = $this->request->getVar('ec_nama')[$index];
+                    $ec_email     = $this->request->getVar('ec_email')[$index];
+                    $ec_hp    = $this->request->getVar('ec_hp')[$index];
+                    $ukuran_jersey = $this->request->getVar('ukuran_jersey')[$index];
+                }
+                else{
+                    $nama_panjang = $this->request->getVar('nama_panjang_ofc')[$index];
+                    $no_hp = $this->request->getVar('no_hp_ofc')[$index];
+                    $no_ktp = $this->request->getVar('no_ktp_ofc')[$index];
+                    $nama_panggilan = $this->request->getVar('nama_panggilan_ofc')[$index];
+                    $nama_bib = $this->request->getVar('nama_bib_ofc')[$index];
+                    $kewarganegaraan = $this->request->getVar('kewarganegaraan_ofc')[$index];
+                    $tanggal_lahir = $this->request->getVar('tanggal_lahir_ofc')[$index];
+                    $negara = $this->request->getVar('negara_ofc')[$index];
+                    $provinsi = $this->request->getVar('provinsi_ofc')[$index];
+                    $kota = $this->request->getVar('kota_ofc')[$index];
+                    $kecamatan     = $this->request->getVar('kecamatan_ofc')[$index];
+                    $kode_pos     = $this->request->getVar('kode_pos_ofc')[$index];
+                    $alamat = $this->request->getVar('alamat_ofc')[$index];
+                    $sex = $this->request->getVar('sex_ofc')[$index];
+                    $gol_darah     = $this->request->getVar('gol_darah_ofc')[$index];
+                    $nama_komunitas     = $this->request->getVar('nama_komunitas_ofc')[$index];
+                    $swim_time_750 = $this->request->getVar('swim_time_750_ofc')[$index];
+                    $ec_nama     = $this->request->getVar('ec_nama_ofc')[$index];
+                    $ec_email     = $this->request->getVar('ec_email_ofc')[$index];
+                    $ec_hp    = $this->request->getVar('ec_hp_ofc')[$index];
+                    $ukuran_jersey = $this->request->getVar('ukuran_jersey_ofc')[$index];
+                }
+                array_push($users, array(
+                    'id_regis'=>'ID-'.$id,
+                    'id_invoice'=> $id_invoice,
+                    'no_ktp'     => $no_ktp,
+                    'nama_panjang'     => $nama_panjang,
+                    'nama_panggilan'     => $nama_panggilan,
+                    'no_hp'     => $no_hp,
+                    'nama_bib'     => $nama_bib,
+                    'kewarganegaraan'     => $kewarganegaraan,
+                    'tanggal_lahir'     => $tanggal_lahir,
+                    'negara'     => $negara,
+                    'provinsi'     => $provinsi,
+                    'kota'     => $kota,
+                    'kecamatan'     => $kecamatan,
+                    'kode_pos'     => $kode_pos,
+                    'alamat'     => $alamat,
+                    'sex'     => $sex,
+                    'gol_darah'     => $gol_darah,
+                    'nama_komunitas'     => $nama_komunitas,
+                    'swim_time_750' => $swim_time_750,
+                    'ec_nama'     => $ec_nama,
+                    'ec_email'     => $ec_email,
+                    'ec_hp'     => $ec_hp,
+                    'ukuran_jersey'     => $ukuran_jersey, // Ambil dan set data alamat sesuai index array dari $index
+                ));
+                $index++;
+                }  
+                echo "<pre>";
+                print_r($users);
+                echo "</pre>";
+            // $test= $pesertamodel->insertBatch($users);
+            echo 'berhasil';
+           
+        }
+        else{
+            if (!$this->validate([
+                'nama_panggilan' => [
+                    'rules' => 'required',
+                ]
+            ])) {
+                session()->setFlashdata('msg', $this->validator->listErrors());
+                return redirect()->back()->withInput();
             }
-            else{
-                $nama_panjang = $this->request->getVar('nama_panjang_ofc')[$index];
-            }
-            array_push($users, array(
-                'id_regis'=>'ID-'.$id,
-                'id_invoice'=> $id_invoice,
-                'no_ktp'     => $this->request->getVar('no_ktp')[$index],
-                'nama_panjang'     => $nama_panjang,
-                'nama_panggilan'     => $this->request->getVar('nama_panggilan')[$index],
-                'nama_bib'     => $this->request->getVar('nama_bib')[$index],
-                'kewarganegaraan'     => $this->request->getVar('kewarganegaraan')[$index],
-                'tanggal_lahir'     => $this->request->getVar('tanggal_lahir')[$index],
-                'no_hp'     => $this->request->getVar('no_hp')[$index],
-                'negara'     => $this->request->getVar('negara')[$index],
-                'provinsi'     => $this->request->getVar('provinsi')[$index],
-                'kota'     => $this->request->getVar('kota')[$index],
-                'kecamatan'     => $this->request->getVar('kecamatan')[$index],
-                'kode_pos'     => $this->request->getVar('kode_pos')[$index],
-                'alamat'     => $this->request->getVar('alamat')[$index],
-                'sex'     => $this->request->getVar('sex')[$index],
-                'gol_darah'     => $this->request->getVar('gol_darah')[$index],
-                'nama_komunitas'     => $this->request->getVar('nama_komunitas')[$index],
-                'swim_time_750' => $this->request->getVar('swim_time_750')[$index],
-                'ec_nama'     => $this->request->getVar('ec_nama')[$index],
-                'ec_email'     => $this->request->getVar('ec_email')[$index],
-                'ec_hp'     => $this->request->getVar('ec_hp')[$index],
-                'ukuran_jersey'     => $this->request->getVar('ukuran_jersey')[$index], // Ambil dan set data alamat sesuai index array dari $index
-            ));
-            $index++;
-            }  
-        print_r($users);
-        // $test= $pesertamodel->insertBatch($users);
-        echo 'berhasil';
+        }
      }
 
      public function uploadBukti(){
         
-        $users = new PesertaModel();
+        $users = new AkunUserModel();
         $session = session();
-        $user = $session->get('no_ktp');
-        $users = $users->where('no_ktp', $user)->first();
+        $user = $session->get('email');
+        $users = $users->where('email', $user)->first();
         $nama = $users['nama_panjang'];
         
         $id = $this->request->getVar('id_invoice');

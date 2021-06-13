@@ -4,7 +4,7 @@ use CodeIgniter\Controller;
 use App\Models\AkunUserModel;
 use App\Models\InvoiceModel;
 use App\Models\PaketModel;
-use App\Models\SubPaketModel;
+use App\Models\SubModel;
 use App\Models\CompetitionModel;
 
 class Dashboard extends Controller
@@ -14,7 +14,7 @@ class Dashboard extends Controller
         $users = new AkunUserModel();
         $invoice = new InvoiceModel();
         $paket = new PaketModel();
-        $subpaket = new SubPaketModel();
+        $subpaket = new SubModel();
         $competition = new CompetitionModel();
         $session = session();
         $user = $session->get('email');
@@ -23,9 +23,9 @@ class Dashboard extends Controller
         
         if($invoice){
 
-            $subpaket =  $subpaket->where('id_sub',$invoice['id_sub'])->first();
-            $data['paket'] = $paket->where('id_paket',$subpaket['id_paket'])->first();
-            $data['competition'] =  $competition->where('id_competition', $paket['id_competition'])->first();
+            $data['subpaket'] =  $subpaket->where('id_sub',$invoice['id_sub'])->first();
+            $data['paket'] = $paket->where('id_paket',$data['subpaket']['id_paket'])->first();
+            $data['competition'] =  $competition->where('id_competition', $data['paket']['id_competition'])->first();
             $data['invoice'] = $invoice;
             if($invoice['status'] == 2){
                 return view('member/dash_lunas', $data);
