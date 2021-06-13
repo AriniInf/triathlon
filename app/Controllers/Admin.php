@@ -2,6 +2,8 @@
  
 use CodeIgniter\Controller;
 use App\Models\AdminModel;
+use App\Models\SubModel;
+use App\Models\AkunUserModel;
 use App\Models\InvoiceModel;
 
 class Admin extends Controller
@@ -44,7 +46,14 @@ class Admin extends Controller
         $session = session();
         $data['admin'] = $session->get('nama');
         $invoice = new InvoiceModel();
-        $data['invoice'] = $invoice->where('status',1)->findAll();
+        $subpaket = new SubModel();
+        $akun = new AkunUserModel();
+        // $data['invoice'] = $invoice->where('status',1)->findAll();
+        // print_r($data['invoice']);
+        // $data['invoice'] = $subpaket->where('id_sub',$data['invoice']['id_sub'])->findAll();
+        // $data['invoice'] = $akun->where('email',$data['invoice']['email'])->findAll();
+        $data['invoice'] = $invoice->get_invoice();
+
     	return view('admin/dashboard_admin',$data);
     }
  

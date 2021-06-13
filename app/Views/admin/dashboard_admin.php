@@ -117,39 +117,37 @@
                 
                 <th>Full Name</th>
                 <th>Email</th>
-                <th>Phone Number</th>
-                <th>Address</th>
-
                 <th>Package</th>
-                <th>Category</th>
-                <th>Jersey Size</th>
                 <th>Total</th>
-
                 <th>Photo</th>
-
                 <th>Action</th>
                </tr>
              </thead>
-             <tbody>          
+             <tbody>   
+             <?php $no = 1; foreach($invoice as $row){ ?>       
               <tr>
-                <?php $no = 1; foreach($invoice as $row){ ?>
-                  <td><?php $no++ ?></td>
-                  <td id="x"><?= $row['no_ktp'] ?></td>
-                  <td id="y">Yeye</td>
-                  <td id="z">Lulu</td>
-                  <td id="x">Lala</td>
-                  <td id="y"><?= $row['id_paket'] ?></td>
-                  <td id="z">Lulu</td>
-                  <td id="x">Lala</td>
-                  <td id="y"><?= $row['harga'] ?></td>
+                
+                  <td><?= $no++ ?></td>
+                  <td id="x"><?= $row->nama_panjang ?></td>
+                  <td id="z"><?= $row->email ?></td>
+                  <td id="y"><?= $row->nama_sub ?></td>
+                  
+                  <td id="y">Rp.<?= $row->harga ?></td>
                   <td id="z">
-                    <img class="img-responsive" src="<?= base_url('assets/img/iccom.png') ?>" alt="logo1" style="max-height: 90px;">
+                    <img class="img-responsive" src="<?=base_url()?>/uploads/bukti_bayar/<?=$row->bukti_bayar?>" alt="logo1" style="max-height: 90px;">
                   </td>
                   <td>
-                    <a data-toggle="modal" data-target="#modal-edit"> <em class="btn btn-sm btn-danger btn-create">Konfirmasi</em></a> 
+                    <form action="/approve" method="post">
+                      <button class="btn-buyy" name="id_invoice" type="submit" value="<?=$row->id_invoice?>"><?=$row->id_invoice?>Approve</button>
+                    </form>
+                    <form action="/reject" method="post">
+                      <button class="btn-buyy" name="id_invoice" type="submit" value="<?=$row->id_invoice?>"><?=$row->id_invoice?>Reject</button>
+                    </form>
+                   
                   </td>
-                <?php } ?>
+               
               </tr>
+              <?php } ?>
              </tbody>
            </table>
          </div>

@@ -23,11 +23,7 @@
     <h3 style="color: #e60000;margin-left: 7%">Data Participant 1</h3>
     <a class="btn btn-sm btn-danger at"  onclick="show_atlet()"> Athlete</a>
     <a class="btn btn-sm btn-danger ofc" id="ofc1" onclick="show_official()">Official</a>
-        <?php if(session()->getFlashdata('msg')):?>
-        <div class="form-row">
-            <div class="alert alert-danger"><?= session()->getFlashdata('msg') ?></div>							     	
-        </div>
-        <?php endif;?>
+
     <form id="myform" action="/daftar" method="post">
         <input type="hidden" name="penanda[1]" id="penanda1" value="athlete">
         <input type="hidden" name="penanda[2]" id="penanda2" value="athlete">
@@ -347,7 +343,7 @@
                     <div class="form-left">
 
                         <h2>Personal Information</h2>
-                        <input type="hidden" name="email_ofc[]" id="email_ofc2" class="ofc_email" form="myform" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="Email">
+                        <input type="hidden" name="email_ofc[]" id="email_ofc" class="ofc_email" form="myform" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="Email">
                                 <input type="hidden" name="nama_bib_ofc[]" class="nama_bib" id="nama_bib"  form="myform">
                                 <input type="hidden" name="kewarganegaraan_ofc[]" class="kewarganegaraan" id="kewarganegaraan"  form="myform">
                                 <input type="hidden" name="tanggal_lahir_ofc[]" class="tanggal_lahir" id="tanggal_lahir"  form="myform" >
