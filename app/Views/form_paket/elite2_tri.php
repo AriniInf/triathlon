@@ -26,11 +26,11 @@
 
     <form id="myform" action="/daftar" method="post">
         <div class="atlet1">
-            <b>First Name:</b> <input type="text" name="firstName[]">
+            <b>First Name:</b> <input type="text" name="firstName">
         </div>
         <div class="official1">
             <div class="form-v10-content" >
-                <div class="form-detail" id="myform" >
+                <div class="form-detail" id="myform">
                     <a href="<?= base_url('') ?>"><img src="assets/img/prev1.png" alt="back" style="width:40px;height:40px;padding: 50px 0px 0px 50px"></a>
                     <div class="form-left">
 
@@ -91,7 +91,7 @@
     <a class="btn btn-sm btn-danger ofc2" onclick="show_official()">Official</a>
 
         <div class="atlet2">
-             <div class="form-v10-content" >
+            <b>First Name:</b> <input type="text" name="firstName">
         </div>
         <div class="official2">
     <div class="form-v10-content" >
