@@ -1,7 +1,7 @@
 <?php namespace App\Controllers;
  
 use CodeIgniter\Controller;
-use App\Models\UserModel;
+use App\Models\AkunUserModel;
  
 class Login extends Controller
 {
@@ -14,7 +14,7 @@ class Login extends Controller
     public function auth()
     {
         $session = session();
-        $model = new UserModel();
+        $model = new AkunUserModel();
         $email = $this->request->getVar('email');
         $password = $this->request->getVar('password');
         $data = $model->where('email', $email)->first();
@@ -23,7 +23,6 @@ class Login extends Controller
             $verify_pass = password_verify($password, $pass);
             if($verify_pass){
                 $ses_data = [
-                    'no_ktp'       => $data['no_ktp'],
                     'nama_panjang'     => $data['nama_panjang'],
                     'email'    => $data['email'],
                     'logged_in'     => TRUE

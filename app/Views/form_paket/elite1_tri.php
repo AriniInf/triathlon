@@ -13,7 +13,7 @@
         <h3 style="color: #e60000;margin-left: 7%">Data Participant Single Room Elite Triathlon</h3>
         <div class="page-content">
             <div class="form-v10-content" style="margin-top: 0px;">
-                <form class="form-detail" action="/post-register" method="post" id="myform">
+                <form class="form-detail" action="/daftar" method="post" id="myform">
                     <a href="<?= base_url('') ?>"><img src="assets/img/prev1.png" alt="back" style="width:40px;height:40px;padding: 50px 0px 0px 50px"></a>
                     <div class="form-left">
 

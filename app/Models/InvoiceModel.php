@@ -6,12 +6,13 @@ class InvoiceModel extends Model{
     protected $table = 'invoice';
     protected $allowedFields = [
         'id_invoice',
-        'no_ktp',
-        'id_paket',
+        'email',
+        'id_sub',
         'status',
         'age_group',
         'bukti_bayar',
         'harga',
-        'tanggal'
+        'tanggal_bayar',
+        'tanggal_beli'
     ];
 }

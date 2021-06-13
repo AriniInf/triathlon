@@ -21,6 +21,7 @@
 
 <div class="container" style="background-color: #fff9f7">
   <br>
+  <div class="form-detail" action="/post-register" method="post" id="myform">
   <!-- Nav pills -->
   <ul class="nav nav-pills" role="tablist">
     <li class="nav-item">
@@ -56,7 +57,7 @@
                 <div class="tab-pane fade show active" id="athlete">
                         <div class="page-content">
                             <div class="form-v10-content">
-                                <form class="form-detail" action="/post-register" method="post" id="myform">
+                                <div class="form-detail" id="myform">
                                     <a href="<?= base_url('') ?>"><img src="assets/img/prev1.png" alt="back" style="width:40px;height:40px;padding: 50px 0px 0px 50px"></a>
                                     <div class="form-left">
 
@@ -174,7 +175,7 @@
                                         </div>
 
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
 
@@ -184,7 +185,7 @@
         <!--         (TAB BUAT OFFICIALL) -->
                 <div class="tab-pane fade" id="official">
                         <div class="form-v10-content">
-                            <form class="form-detail" action="/post-register" method="post" id="myform">
+                            <div class="form-detail" id="myform">
                                 <a href="<?= base_url('') ?>"><img src="assets/img/prev1.png" alt="back" style="width:40px;height:40px;padding: 50px 0px 0px 50px"></a>
                                 <div class="form-left">
 
@@ -212,7 +213,7 @@
                                     </div>
 
                                 </div>
-                            </form>
+                            </div>
                         </div>
                 </div>
 
@@ -240,7 +241,7 @@
                 <div class="tab-pane fade show active" id="athlete2">
                         <div class="page-content">
                             <div class="form-v10-content">
-                                <form class="form-detail" action="/post-register" method="post" id="myform">
+                                <div class="form-detail" id="myform">
                                     <a href="<?= base_url('') ?>"><img src="assets/img/prev1.png" alt="back" style="width:40px;height:40px;padding: 50px 0px 0px 50px"></a>
                                     <div class="form-left">
 
@@ -358,7 +359,7 @@
                                         </div>
 
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
 
@@ -368,7 +369,7 @@
         <!--         (TAB BUAT OFFICIALL) -->
                 <div class="tab-pane fade" id="official2">
                         <div class="form-v10-content">
-                            <form class="form-detail" action="/post-register" method="post" id="myform">
+                            <div class="form-detail" id="myform">
                                 <a href="<?= base_url('') ?>"><img src="assets/img/prev1.png" alt="back" style="width:40px;height:40px;padding: 50px 0px 0px 50px"></a>
                                 <div class="form-left">
 
@@ -395,8 +396,10 @@
                                         <input type="email" name="ofc_email" id="ofc_email" class="ofc_email" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="Email">
                                     </div>
 
+
+
                                 </div>
-                            </form>
+                            </div>
                         </div>
                 </div>
 
@@ -423,7 +426,7 @@
                 <div class="tab-pane fade show active" id="athlete3">
                         <div class="page-content">
                             <div class="form-v10-content">
-                                <form class="form-detail" action="/post-register" method="post" id="myform">
+                                <div class="form-detail" id="myform">
                                     <a href="<?= base_url('') ?>"><img src="assets/img/prev1.png" alt="back" style="width:40px;height:40px;padding: 50px 0px 0px 50px"></a>
                                     <div class="form-left">
 
@@ -541,7 +544,7 @@
                                         </div>
 
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
 
@@ -551,7 +554,7 @@
         <!--         (TAB BUAT OFFICIALL) -->
                 <div class="tab-pane fade" id="official3">
                         <div class="form-v10-content">
-                            <form class="form-detail" action="/post-register" method="post" id="myform">
+                            <div class="form-detail" id="myform">
                                 <a href="<?= base_url('') ?>"><img src="assets/img/prev1.png" alt="back" style="width:40px;height:40px;padding: 50px 0px 0px 50px"></a>
                                 <div class="form-left">
 
@@ -579,7 +582,7 @@
                                     </div>
 
                                 </div>
-                            </form>
+                            </div>
                         </div>
                 </div>
 
@@ -594,6 +597,7 @@
 
   </div>
 <!--   tutup tab content -->
+</form>
 </div>
 <!-- tutup container
  -->

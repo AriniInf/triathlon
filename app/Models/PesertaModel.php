@@ -2,10 +2,12 @@
  
 use CodeIgniter\Model;
  
-class UserModel extends Model{
-    protected $table = 'users';
+class PesertaModel extends Model{
+    protected $table = 'peserta';
     protected $allowedFields = [
         'no_ktp',
+        'id_regis',
+        'id_invoice',
         'nama_panjang',
         'nama_panggilan',
         'nama_bib',
@@ -26,7 +28,6 @@ class UserModel extends Model{
         'ec_nama',
         'ec_email',
         'ec_hp',
-        'ukuran_jersey',
-        'password'
+        'ukuran_jersey'
     ];
 }

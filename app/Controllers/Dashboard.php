@@ -1,27 +1,30 @@
 <?php namespace App\Controllers;
  
 use CodeIgniter\Controller;
-use App\Models\UserModel;
+use App\Models\AkunUserModel;
 use App\Models\InvoiceModel;
 use App\Models\PaketModel;
+use App\Models\SubPaketModel;
 use App\Models\CompetitionModel;
 
 class Dashboard extends Controller
 {
     public function index()
     {
-        $users = new UserModel();
+        $users = new AkunUserModel();
         $invoice = new InvoiceModel();
         $paket = new PaketModel();
+        $subpaket = new SubPaketModel();
         $competition = new CompetitionModel();
         $session = session();
-        $user = $session->get('no_ktp');
-        $data['users'] = $users->where('no_ktp', $user)->first();
-        $invoice = $invoice->where('no_ktp', $user)->first();
+        $user = $session->get('email');
+        $data['users'] = $users->where('email', $user)->first();
+        $invoice = $invoice->where('email', $user)->first();
         
         if($invoice){
 
-            $paket =  $paket->where('id_paket',$invoice['id_paket'])->first();
+            $subpaket =  $subpaket->where('id_sub',$invoice['id_sub'])->first();
+            $data['paket'] = $paket->where('id_paket',$subpaket['id_paket'])->first();
             $data['competition'] =  $competition->where('id_competition', $paket['id_competition'])->first();
             $data['invoice'] = $invoice;
             if($invoice['status'] == 2){
