@@ -52,7 +52,7 @@
                 <td id="5">12 Des 1999</td>
                 <td id="6">9812671624461</td>
                 <td id="7">081552677189</td>
-                <td id="8">Jl.Rajawali VI blok G/7, wary Sidoarjo 61256</td>
+                <td id="8">Jl.Rajawali VI blok G/7, waru Sidoarjo 61256</td>
                 <td id="9">P</td>
                 <td id="10">B</td>
                 <td id="11">Group Lombia</td>
