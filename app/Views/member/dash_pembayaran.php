@@ -41,11 +41,11 @@
                                                                 <td><?= $competition['nama_competition'] ?></td>
                                                                 <td class="text-xs-right">Rp.<?= $invoice['harga'] ?></td>
                                                             </tr>
-                                                            <tr>
+      <!--                                                       <tr>
                                                                 <td>Jersey</td>
                                                                 <td class="text-xs-right">Rp.0</td>
                                                             </tr>
-
+ -->
                                                             <tr>
                                                                 <td class="emptyrow text-xs-center"><strong>Total</strong></td>
                                                                 <td class="emptyrow text-xs-right">Rp.<?= $invoice['harga'] ?></td>

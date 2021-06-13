@@ -32,6 +32,11 @@
 						    </div>
 						    <div class="col col-sm-11" style="padding-left: 0px;">
 						     <h2>Register Account</h2>
+
+						     
+						     <div class="form-row">
+						     	<input type="text" name="nama_panjang" id="full_name" class="input-text" placeholder="Full Name" required>
+						     </div>
 	
 						     <div class="form-row">
 						     		<input type="email" name="email" class="email" id="email" placeholder="Email" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" >

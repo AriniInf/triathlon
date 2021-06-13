@@ -33,21 +33,29 @@ class Invoice extends Controller
             'tanggal_beli' => date('d-m-Y')
         ];
         print_r($data);
-        $invoice->insert($data);
+        // $invoice->insert($data);
         $users = array();
-        $nama_panggilan = $this->request->getVar('nama_panggilan');
+        // $nama_panggilan = $this->request->getVar('nama_panggilan');
+        $penandas = $this->request->getVar('penanda');
 
         $index = 0; // Set index array awal dengan 0
-    
-        foreach($nama_panggilan as $panjangs){ 
+        
+        foreach($penandas as $penanda){ 
             $id = uniqid();
             // echo $nama;// Kita buat perulangan berdasarkan nis sampai data terakhir
+            if ($penanda == 'athlete') {
+                $nama_panjang = $this->request->getVar('nama_panjang')[$index];
+                # code...
+            }
+            else{
+                $nama_panjang = $this->request->getVar('nama_panjang_ofc')[$index];
+            }
             array_push($users, array(
                 'id_regis'=>'ID-'.$id,
                 'id_invoice'=> $id_invoice,
                 'no_ktp'     => $this->request->getVar('no_ktp')[$index],
-                'nama_panjang'     => $this->request->getVar('nama_panjang')[$index],
-                'nama_panggilan'     => $panjangs,
+                'nama_panjang'     => $nama_panjang,
+                'nama_panggilan'     => $this->request->getVar('nama_panggilan')[$index],
                 'nama_bib'     => $this->request->getVar('nama_bib')[$index],
                 'kewarganegaraan'     => $this->request->getVar('kewarganegaraan')[$index],
                 'tanggal_lahir'     => $this->request->getVar('tanggal_lahir')[$index],
@@ -70,7 +78,7 @@ class Invoice extends Controller
             $index++;
             }  
         print_r($users);
-        $test= $pesertamodel->insertBatch($users);
+        // $test= $pesertamodel->insertBatch($users);
         echo 'berhasil';
      }
 
