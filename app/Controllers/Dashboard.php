@@ -9,15 +9,13 @@ use App\Models\CompetitionModel;
 
 class Dashboard extends Controller
 {
-    public function index()
-    {
+    public function dashboard(){
         $users = new AkunUserModel();
         $invoice = new InvoiceModel();
         $paket = new PaketModel();
         $subpaket = new SubModel();
         $competition = new CompetitionModel();
-        $session = session();
-        $user = $session->get('email');
+        $user = session()->get('email');
         $data['users'] = $users->where('email', $user)->first();
         $invoice = $invoice->where('email', $user)->first();
         
@@ -41,6 +39,7 @@ class Dashboard extends Controller
         else{
             return view('member/dash_tidakaktif',$data);
         }
+        return view('haha');
     }
     
 }

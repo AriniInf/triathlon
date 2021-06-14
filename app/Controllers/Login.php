@@ -22,13 +22,12 @@ class Login extends Controller
             $pass = $data['password'];
             $verify_pass = password_verify($password, $pass);
             if($verify_pass){
-                $ses_data = [
+                session()->set([
                     'nama_panjang'     => $data['nama_panjang'],
                     'email'    => $data['email'],
                     'logged_in'     => TRUE
-                ];
-                $session->set($ses_data);
-                return redirect()->to('/dashboard');
+                ]);
+                return redirect()->to('/dashboard-user');
             }else{
                 $session->setFlashdata('msg', 'Wrong Email or Password');
                 return redirect()->to('/login');

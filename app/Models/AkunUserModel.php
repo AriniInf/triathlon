@@ -6,6 +6,7 @@ class AkunUserModel extends Model{
     protected $table = 'akun_user';
     protected $allowedFields = [
         'email',
-        'password'
+        'password',
+        'nama_panjang'
     ];
 }

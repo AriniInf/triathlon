@@ -22,7 +22,7 @@
 	<div class="page-content" style="">		
 		<div class="form-v10-content">
 			
-			<form class="form-detail" action="<?= base_url('post-register') ?>" method="post" id="myform">
+			<form class="form-detail" action="<?= base_url('/post-register') ?>" method="post" id="myform">
 
 				<div class="form-right" class="center">
 

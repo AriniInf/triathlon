@@ -19,13 +19,15 @@ class Register extends Controller
         helper(['form']);
         //set rules validation form
         $rules = [
-            'email'         => 'required',
+            'nama_panjang' => 'required',
+            'email'         => 'required|is_unique[akun_user.email]',
             'password'      => 'required|min_length[6]'
         ];
          
         if($this->validate($rules)){
             $model = new AkunUserModel();
             $data = [
+                'nama_panjang'    => $this->request->getVar('nama_panjang'),
                 'email'    => $this->request->getVar('email'),
                 'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT)
             ];
