@@ -33,7 +33,23 @@ class Email extends BaseConfig
 	 *
 	 * @var string
 	 */
-	public $protocol = 'mail';
+	// public $protocol = 'mail';
+	// public $protocol = 'smtp';
+	// public $SMTPHost = 'smtp.gmail.com';
+	// public $SMTPUser = 'triathlonunesa@gmail.com';
+	// public $SMTPPass = 'unesatriathlon2021';
+	// public $SMTPPort = 465;
+	// public $SMTPCrypto = 'ssl';
+	// public $mailType = 'html';
+
+	// public $protocol = 'mail';
+	public $protocol = 'smtp';
+	public $SMTPHost = 'smtp.gmail.com';
+	public $SMTPUser = 'arini.inf@gmail.com';
+	public $SMTPPass = 'ainf1099';
+	public $SMTPPort = 465;
+	public $SMTPCrypto = 'ssl';
+	public $mailType = 'html';
 
 	/**
 	 * The server path to Sendmail.
@@ -47,28 +63,28 @@ class Email extends BaseConfig
 	 *
 	 * @var string
 	 */
-	public $SMTPHost;
+	// public $SMTPHost;
 
 	/**
 	 * SMTP Username
 	 *
 	 * @var string
 	 */
-	public $SMTPUser;
+	// public $SMTPUser;
 
 	/**
 	 * SMTP Password
 	 *
 	 * @var string
 	 */
-	public $SMTPPass;
+	// public $SMTPPass;
 
 	/**
 	 * SMTP Port
 	 *
 	 * @var integer
 	 */
-	public $SMTPPort = 25;
+	// public $SMTPPort = 25;
 
 	/**
 	 * SMTP Timeout (in seconds)
@@ -89,7 +105,7 @@ class Email extends BaseConfig
 	 *
 	 * @var string
 	 */
-	public $SMTPCrypto = 'tls';
+	// public $SMTPCrypto = 'tls';
 
 	/**
 	 * Enable word-wrap
@@ -110,14 +126,14 @@ class Email extends BaseConfig
 	 *
 	 * @var string
 	 */
-	public $mailType = 'text';
+	// public $mailType = 'text';
 
 	/**
 	 * Character set (utf-8, iso-8859-1, etc.)
 	 *
 	 * @var string
 	 */
-	public $charset = 'UTF-8';
+	public $charset = 'utf-8';
 
 	/**
 	 * Whether to validate the email address

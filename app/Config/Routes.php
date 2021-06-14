@@ -42,10 +42,12 @@ $routes->get('/register','Register::index');
 $routes->get('/login','Login::index');
 $routes->get('/duathlon','Paket::index');
 $routes->get('/triathlon','Paket::triathlon');
-$routes->get('/dashboard','Dashboard::index');
+$routes->get('/dashboard','Dashboard::index', ['as' => 'dashboard']);
 $routes->post('/post-register','Register::save');
 $routes->post('/post-login','Login::auth');
 $routes->post('/daftar', 'Invoice::addInvoice');
+$routes->post('/approve', 'Invoice::approve');
+$routes->post('/reject', 'Invoice::reject');
 $routes->post('/upload-bukti', 'Invoice::uploadBukti');
 $routes->post('/invoice', 'Invoice::index');
 

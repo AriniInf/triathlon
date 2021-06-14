@@ -35,7 +35,9 @@ class Invoice extends Controller
             'tanggal_beli' => date('d-m-Y')
         ];
         // print_r($data);
-        // $invoice->insert($data);
+
+        $invoice->insert($data);
+
         $users = array();
         // $nama_panggilan = $this->request->getVar('nama_panggilan');
         $penandas = $this->request->getVar('penanda');
@@ -118,11 +120,12 @@ class Invoice extends Controller
             ));
             $index++;
             }  
-            echo "<pre>";
-            print_r($users);
-            echo "</pre>";
-        // $pesertamodel->insertBatch($users);
-        // return redirect()->route('dashboard');
+
+            // echo "<pre>";
+            // print_r($users);
+            // echo "</pre>";
+        $pesertamodel->insertBatch($users);
+        return redirect()->route('dashboard');
 
            
         
@@ -157,15 +160,92 @@ class Invoice extends Controller
 
         $data = [
             'tanggal_bayar' => date('d-m-Y'),
+
             'bukti_bayar' => $fileName,
+
             'status' => 1
         ];
         echo $id;
 
         $invoiceModel->update_invoice($data, $id);
+
         $dataBerkas->move(ROOTPATH . 'public/uploads/bukti_bayar/', $fileName);
         session()->setFlashdata('msg', 'Berkas Berhasil diupload');
         return redirect()->back();
+
+     }
+
+     public function approve(){
+        $id = $this->request->getVar('id_invoice');
+        $invoiceModel = new InvoiceModel();
+        $data['users'] = $invoiceModel->get_user($id);
+        $data['members'] = $invoiceModel->get_member($id);
+        print_r($data['members']);
+        $receiver = $this->request->getVar('email');
+        $receiver_nama = $this->request->getVar('nama_panjang');
+        echo $receiver;
+        $input = [
+            'status' => 2
+        ];
+
+        $this->email = \Config\Services::email();
+        
+        $this->email->setFrom('triathlonunesa@gmail.com','UNESA Triathlon');
+		$this->email->setTo($receiver);
+
+		// $this->email->attach($attachment);
+        $body = view('email_approve', $data);
+
+		$this->email->setSubject('Payment Approval');
+		$this->email->setMessage($body);
+
+        if ($this->email->send()) 
+		{
+            $invoiceModel->update_invoice($input, $id);
+            return redirect()->back();
+        } 
+		else 
+		{
+            $data = $this->email->printDebugger(['headers']);
+            print_r($input);
+        }
+     }
+
+
+     public function reject(){
+        $id = $this->request->getVar('id_invoice');
+        $invoiceModel = new InvoiceModel();
+        $data['users'] = $invoiceModel->get_user($id);
+        $data['members'] = $invoiceModel->get_member($id);
+        print_r($data['members']);
+        $receiver = $this->request->getVar('email');
+        $receiver_nama = $this->request->getVar('nama_panjang');
+        echo $receiver;
+        $input = [
+            'status' => 3
+        ];
+
+        $this->email = \Config\Services::email();
+        
+        $this->email->setFrom('triathlonunesa@gmail.com','UNESA Triathlon');
+		$this->email->setTo($receiver);
+
+		// $this->email->attach($attachment);
+        $body = view('email_reject', $data);
+
+		$this->email->setSubject('Payment Rejection');
+		$this->email->setMessage($body);
+
+        if ($this->email->send()) 
+		{
+            $invoiceModel->update_invoice($input, $id);
+            return redirect()->back();
+        } 
+		else 
+		{
+            $data = $this->email->printDebugger(['headers']);
+            print_r($input);
+        }
      }
     
 }

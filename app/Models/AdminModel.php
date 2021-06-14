@@ -9,4 +9,6 @@ class AdminModel extends Model{
         'nama',
         'password'
     ];
+
+    
 }
