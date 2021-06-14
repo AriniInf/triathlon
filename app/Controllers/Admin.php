@@ -55,6 +55,7 @@ class Admin extends Controller
         $data['invoice'] = $invoice->get_invoice();
 
     	return view('admin/dashboard_admin',$data);
+        // return view('admin/dashboard_admin1');
     }
  
     public function logout()

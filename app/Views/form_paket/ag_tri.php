@@ -15,7 +15,8 @@
 		<h3 style="color: #e60000;margin-left: 7%">Data Participant Triathlon Age Group</h3>
         <div class="page-content">
             <div class="form-v10-content" style="margin-top: 0px;">
-                <form class="form-detail" action="/daftar" method="post" id="myform">
+                <form class="form-detail" action="<?= base_url('daftar') ?>" method="post" id="myform">
+                    <input type="hidden" name="penanda[1]" id="penanda1" value="athlete">
                     <a href="<?= base_url('') ?>"><img src="assets/img/prev1.png" alt="back" style="width:40px;height:40px;padding: 50px 0px 0px 50px"></a>
                     <div class="form-left">
 
@@ -138,7 +139,7 @@
                         </div>
 
                         <input type="hidden" name="age_group" id="age_group" class="input-text">
-                        <input type="hidden" name="harga" value="300000">
+                        <input type="hidden" name="harga" value="1000000">
                         <input type="hidden" name="id_sub" value="9">
 
                     </div>

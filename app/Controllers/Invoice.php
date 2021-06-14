@@ -35,7 +35,9 @@ class Invoice extends Controller
             'tanggal_beli' => date('d-m-Y')
         ];
         // print_r($data);
+
         $invoice->insert($data);
+
         $users = array();
         // $nama_panggilan = $this->request->getVar('nama_panggilan');
         $penandas = $this->request->getVar('penanda');
@@ -118,6 +120,7 @@ class Invoice extends Controller
             ));
             $index++;
             }  
+
             // echo "<pre>";
             // print_r($users);
             // echo "</pre>";
@@ -139,33 +142,37 @@ class Invoice extends Controller
         $id = $this->request->getVar('id_invoice');
         $invoiceModel = new InvoiceModel();
         $dataBerkas = $this->request->getFile('berkas');
-		$fileName = date('d-m-Y').'-'.$nama.'.'.$dataBerkas->getClientExtension();
+        $fileName = date('d-m-Y').'-'.$nama.'.'.$dataBerkas->getClientExtension();
 
         if (!$this->validate([
-			'berkas' => [
-				'rules' => 'uploaded[berkas]|mime_in[berkas,image/jpg,image/jpeg,image/png]|max_size[berkas,2048]',
-				'errors' => [
-					'uploaded' => 'Harus Ada File yang diupload',
-					'mime_in' => 'File Extention Harus Berupa jpg,jpeg,png',
-					'max_size' => 'Ukuran File Maksimal 2 MB'
-				]
-			]
-		])) {
-			session()->setFlashdata('msg', $this->validator->listErrors());
-			return redirect()->back()->withInput();
-		}
+            'berkas' => [
+                'rules' => 'uploaded[berkas]|mime_in[berkas,image/jpg,image/jpeg,image/png]|max_size[berkas,2048]',
+                'errors' => [
+                    'uploaded' => 'Harus Ada File yang diupload',
+                    'mime_in' => 'File Extention Harus Berupa jpg,jpeg,png',
+                    'max_size' => 'Ukuran File Maksimal 2 MB'
+                ]
+            ]
+        ])) {
+            session()->setFlashdata('msg', $this->validator->listErrors());
+            return redirect()->back()->withInput();
+        }
 
         $data = [
             'tanggal_bayar' => date('d-m-Y'),
-			'bukti_bayar' => $fileName,
+
+            'bukti_bayar' => $fileName,
+
             'status' => 1
         ];
         echo $id;
 
         $invoiceModel->update_invoice($data, $id);
-		$dataBerkas->move(ROOTPATH . 'public/uploads/bukti_bayar/', $fileName);
-		session()->setFlashdata('msg', 'Bukti Bayar Berhasil diupload');
-		return redirect()->back();
+
+        $dataBerkas->move(ROOTPATH . 'public/uploads/bukti_bayar/', $fileName);
+        session()->setFlashdata('msg', 'Berkas Berhasil diupload');
+        return redirect()->back();
+
      }
 
      public function approve(){

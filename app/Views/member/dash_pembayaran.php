@@ -70,7 +70,7 @@
                                   <br>
                                   <?= $invoice['id_invoice'] ?>
 
-                                  <form method="post" action="/upload-bukti" enctype="multipart/form-data">
+                                  <form method="post" action="<?= base_url('upload-bukti') ?>" enctype="multipart/form-data">
                                     <div class="custom-file mb-3">
                                       <input type="text" value="<?= $invoice['id_invoice'] ?>" name="id_invoice"> 
                                       <input type="file" class="custom-file-input" id="customFile" name="berkas">

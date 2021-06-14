@@ -26,7 +26,7 @@
 		
 		<div class="form-v10-content">
 			
-			<form class="form-detail" action="/post-login" method="post" id="myform">
+			<form class="form-detail" action="<?= base_url('post-login') ?>" method="post" id="myform">
 
 				<div class="form-right" class="center">
 
