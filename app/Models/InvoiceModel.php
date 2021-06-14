@@ -45,7 +45,7 @@ class InvoiceModel extends Model{
 
     public function get_member($id){
         $builder = $this->db->table($this->table);
-        $builder->select('peserta.nama_panjang, peserta.id_regis');
+        $builder->select('peserta.nama_panjang, peserta.id_regis, peserta.nama_panggilan, peserta.nama_bib, peserta.id_regis, peserta.no_ktp, peserta.kewarganegaraan, peserta.tanggal_lahir, peserta.no_hp, peserta.alamat, peserta.sex, peserta.gol_darah, peserta.nama_komunitas, peserta.swim_time_750,  peserta.ukuran_jersey');
         $builder->join('peserta', 'invoice.id_invoice = peserta.id_invoice');
         $builder->where('invoice.id_invoice', $id);
         $query = $builder->get();

@@ -11,14 +11,14 @@ class Dashboard extends Controller
 {
     public function dashboard(){
         $users = new AkunUserModel();
-        $invoice = new InvoiceModel();
+        $invoiceModel = new InvoiceModel();
         $paket = new PaketModel();
         $subpaket = new SubModel();
         $competition = new CompetitionModel();
         $user = session()->get('email');
         $data['users'] = $users->where('email', $user)->first();
-        $invoice = $invoice->where('email', $user)->first();
-        
+        $invoice = $invoiceModel->where('email', $user)->first();
+        $data['peserta'] = $invoiceModel->get_member($invoice['id_invoice']);
         if($invoice){
 
             $data['subpaket'] =  $subpaket->where('id_sub',$invoice['id_sub'])->first();

@@ -16,16 +16,18 @@
                                   <div class="card-body"><center><h6 style="color: white;font-size: 15px">Bukti yang dikirimkan ditolak<br>Silahkan mengirim bukti transfer kembali dengan jelas</h6></center></div>
                                 </div>
                                 <br>
-                                <form action="/action_page.php">
-                                  <div class="custom-file mb-3">
-                                    <input type="file" class="custom-file-input" id="customFile" name="filename">
-                                    <label class="custom-file-label" for="customFile">Choose file</label>
-                                  </div>
-                                  
-                                  <div class="mt-3">
-                                    <button type="submit" class="btn btn-oren float-right">Submit</button>
-                                  </div>
-                                </form>
+                                
+                                <form method="post" action="<?= base_url('upload-bukti') ?>" enctype="multipart/form-data">
+                                    <div class="custom-file mb-3">
+                                      <input type="text" value="<?= $invoice['id_invoice'] ?>" name="id_invoice"> 
+                                      <input type="file" class="custom-file-input" id="customFile" name="berkas">
+                                      <label class="custom-file-label" for="customFile">Choose file</label>
+                                    </div>
+                                    
+                                    <div class="mt-3">
+                                      <button type="submit" class="btn btn-oren float-right">Submit</button>
+                                    </div>
+                                  </form>
                               </div>
 
 <?= $this->endSection() ?>

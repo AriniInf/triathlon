@@ -36,7 +36,7 @@ class Filters extends BaseConfig
 			
 			'usersAuth' => [
 				'except' => [
-					'/login',
+					'/login*',
 					'/logout',
 					'/',
 					'/register',
@@ -45,8 +45,9 @@ class Filters extends BaseConfig
 					'/gallery',
 					'/rank-men',
 					'/rank-women',
-					'/post-login',
-					'/post-register'
+					'/post-login*',
+					'/post-register',
+
 
 				]
 			]

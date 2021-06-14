@@ -25,12 +25,10 @@ class Admin extends Controller
             $pass = $data['password'];
             $verify_pass = password_verify($password, $pass);
             if($verify_pass){
-                $ses_data = [
-                    'nama'     => $data['nama'],
+                session()->set([
                     'email'    => $data['email'],
                     'logged_in'     => TRUE
-                ];
-                $session->set($ses_data);
+                ]);
                 return redirect()->to('/dashboard-admin');
             }else{
                 $session->setFlashdata('msg', 'Wrong Email or Password');
@@ -48,10 +46,6 @@ class Admin extends Controller
         $invoice = new InvoiceModel();
         $subpaket = new SubModel();
         $akun = new AkunUserModel();
-        // $data['invoice'] = $invoice->where('status',1)->findAll();
-        // print_r($data['invoice']);
-        // $data['invoice'] = $subpaket->where('id_sub',$data['invoice']['id_sub'])->findAll();
-        // $data['invoice'] = $akun->where('email',$data['invoice']['email'])->findAll();
         $data['invoice'] = $invoice->get_invoice();
 
     	return view('admin/dashboard_admin',$data);
