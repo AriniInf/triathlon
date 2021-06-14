@@ -21,6 +21,8 @@
 
 <div class="container awal" style="background-color: #fff9f7">
     <h3 style="color: #e60000;margin-left: 7%">Data Participant 1</h3>
+    <p style="color: black;margin-left: 7%"><b>Choose the role of participant 1</b></p>
+    <p style="color: black;margin-left: 7%"><b>Choose the role of participant 1</b></p>
     <a class="btn btn-sm btn-danger at"  onclick="show_atlet()"> Athlete</a>
     <a class="btn btn-sm btn-danger ofc" id="ofc1" onclick="show_official()">Official</a>
         <?php if(session()->getFlashdata('msg')):?>
@@ -28,7 +30,7 @@
             <div class="alert alert-danger"><?= session()->getFlashdata('msg') ?></div>							     	
         </div>
         <?php endif;?>
-    <form id="myform" action="/daftar" method="post">
+    <form id="myform" action="<?= base_url('daftar') ?>" method="post">
         <input type="hidden" name="penanda[1]" id="penanda1" value="athlete">
         <input type="hidden" name="penanda[2]" id="penanda2" value="athlete">
         <input type="hidden" name="harga" value="50">
@@ -214,6 +216,8 @@
     <!-- FORM AWAL KELARR -->
 
     <h3 style="color: #e60000;margin-left: 7%">Data Participant 2</h3>
+    <p style="color: black;margin-left: 7%"><b>Choose the role of participant 2</b></p>
+    <p style="color: black;margin-left: 7%"><b>Choose the role of participant 2</b></p>
     <a class="btn btn-sm btn-danger at2" onclick="show_atlet()"> Athlete</a>
     <a class="btn btn-sm btn-danger ofc2" onclick="show_official()">Official</a>
 
@@ -434,10 +438,6 @@ $(document).ready(function(){
     $(".atlet2").show();
     $(".official2").hide();
     $("#penanda2").val("athlete");
-    // console.log($("#fullname_ofc2").val());
-    // console.log( $("#nickname_ofc2").val());
-    // console.log( $("#email_ofc2").val());
-    // console.log($("#no_hp_ofc2").val());
      if ($("#fullname_ofc2").val()!="" || $("#nickname_ofc2").val()!="" || $("#ktp_ofc2").val()!="" || $("#no_hp_ofc2").val()!="" ) {
         $(".atlet2 :input").prop("disabled", true);
     }

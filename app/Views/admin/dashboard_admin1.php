@@ -3,15 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Dahboard Admin</title>
+  <title>Sim Pengasuhan | STPN</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
-
-  <!-- Favicons -->
-  <link href="assets/img/icbund.png" rel="icon">
-  <link href="assets/img/iccom.png" rel="apple-touch-icon">
-  
   <link rel="stylesheet" href="asset/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="asset/bower_components/font-awesome/css/font-awesome.min.css">
@@ -24,18 +19,12 @@
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="asset/dist/css/skins/_all-skins.min.css">
-  <script src="asset/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-
-  
+  <script src="<?php echo base_url(); ?>asset/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <body class="hold-transition skin-red sidebar-mini">
-
-<style type="text/css">
-
-</style>
 <!-- Site wrapper -->
 <div class="wrapper">
   <header class="main-header">
@@ -58,15 +47,14 @@
 
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
-       	  <li>
-          	<h5 style="margin: 16px 29px;color: white"><strong>Hi, Kalina (Admin1)</strong></h5>
-       	  </li>
+          <li>
+            <h5 style="margin: 16px 29px;color: white"><strong>Hi, Kalina (Admin1)</strong></h5>
+          </li>
         </ul>
       </div>
     </nav>
   </header>
 
-  <!-- Left side column. contains the sidebar -->
   <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
@@ -85,7 +73,7 @@
           </ul>
         </li>
         <li>
-          <a href="<?php echo site_url("login/logout"); ?>"><i class="fa fa-sign-out"></i> <span>Logout</span>
+          <a href="<?php echo site_url('login/logout'); ?>"><i class="fa fa-sign-out"></i> <span>Logout</span>
           </a>
         </li>
       </ul>
@@ -97,80 +85,73 @@
  <div class="content-wrapper">
     <!-- Content Header (Page header) -->
    
-      
+    <section class="content-header">
+      <h1>
+        Data Pendaftaran
+      </h1>
+    </section>
+
+    <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box">  
+
+            <div class="box-body" style="overflow-y:scroll">
+              <table id="example2" class="table table-striped table-bordered bg-danger table-hover text-center">
+                <thead>
+                  <tr>
+                   <th>No</th>
+                   
+                   <th>Full Name</th>
+                   <th>Email</th>
+                   <th>Phone Number</th>
+                   <th>Address</th>
+
+                   <th>Package</th>
+                   <th>Category</th>
+                   <th>Jersey Size</th>
+                   <th>Total</th>
+
+                   <th>Photo</th>
+
+                   <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                <?php $no = 1; foreach($invoice as $row){ ?>          
+                 <tr>
+                    <td><?php $no++ ?></td>
+                    <td id="x"><?= $row['no_ktp'] ?></td>
+                    <td id="y">Yeye</td>
+                    <td id="z">Lulu</td>
+                    <td id="x">Lala</td>
+                    <td id="y"><?= $row['id_paket'] ?></td>
+                    <td id="z">Lulu</td>
+                    <td id="x">Lala</td>
+                    <td id="y"><?= $row['harga'] ?></td>
+                     <td id="z">
+                       <img class="img-responsive" src="<?= base_url('assets/img/iccom.png') ?>" alt="logo1" style="max-height: 90px;">
+                     </td>
+                     <td>
+                       <a data-toggle="modal" data-target="#modal-edit"> <em class="btn btn-sm btn-danger btn-create">Konfirmasi</em></a> 
+                       <a data-toggle="modal" data-target="#modal-edit"> <em class="btn btn-sm btn-warning btn-create">Tolak</em></a> 
+                     </td>
+   
+                 </tr>
+                 <?php } ?>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
     <!-- Main content -->
-
- <section class="content-header">
-   <h1>
-     Data Pendaftaran
-   </h1>
- </section>
-
- <section class="content">
-   <div class="row">
-     <div class="col-xs-12">
-       <div class="box">  
-         <div class="box-body" style="overflow-y:scroll">
-           <table id="example2" class="table table-striped table-bordered bg-danger table-hover text-center">
-             <thead>
-               <tr>
-                <th>No</th>
-                
-                <th>Full Name</th>
-                <th>Email</th>
-                <th>Phone Number</th>
-                <th>Address</th>
-
-                <th>Package</th>
-                <th>Category</th>
-                <th>Jersey Size</th>
-                <th>Total</th>
-
-                <th>Photo</th>
-
-                <th>Action</th>
-               </tr>
-             </thead>
-             <tbody>  
-             <?php $no = 1; foreach($invoice as $row){ ?>        
-              <tr>
-
-                  <td><?php $no++ ?></td>
-                  <td id="x"><?= $row['no_ktp'] ?></td>
-                  <td id="y">Yeye</td>
-                  <td id="z">Lulu</td>
-                  <td id="x">Lala</td>
-                  <td id="y"><?= $row['id_paket'] ?></td>
-                  <td id="z">Lulu</td>
-                  <td id="x">Lala</td>
-                  <td id="y"><?= $row['harga'] ?></td>
-                  <td id="z">
-                    <img class="img-responsive" src="<?= base_url('assets/img/iccom.png') ?>" alt="logo1" style="max-height: 90px;">
-                  </td>
-                  <td>
-                    <a data-toggle="modal" data-target="#modal-edit"> <em class="btn btn-sm btn-danger btn-create">Konfirmasi</em></a> 
-                    <a data-toggle="modal" data-target="#modal-edit"> <em class="btn btn-sm btn-danger btn-create">Tolak</em></a> 
-                  </td>
-
-              </tr>
-              <?php } ?>
-             </tbody>
-           </table>
-         </div>
-       </div>
-     </div>
-    
-
- </section>
-
- <style>
-   .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
-      background-color: #f4f4f4;
-   }
- </style>
     
     <!-- /.content -->
-</div>
+  </div>
   <!-- /.content-wrapper -->
 
   <footer class="main-footer">
@@ -198,8 +179,7 @@
 <!-- AdminLTE for demo purposes -->
 <script src="asset/dist/js/demo.js"></script>
 <script>
-
-	
+  
 $.noConflict();
 jQuery( document ).ready(function( $ ) {
     $('#example2').DataTable();

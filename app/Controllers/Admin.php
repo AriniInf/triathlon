@@ -46,6 +46,7 @@ class Admin extends Controller
         $invoice = new InvoiceModel();
         $data['invoice'] = $invoice->where('status',1)->findAll();
     	return view('admin/dashboard_admin',$data);
+        // return view('admin/dashboard_admin1');
     }
  
     public function logout()

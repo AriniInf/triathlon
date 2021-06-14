@@ -24,7 +24,7 @@
 
               <div class="section-title">
                 <h2 data-aos="fade-up">TRIATHLON</h2>
-                <p data-aos="fade-up">Ini pengantar sekilas diisi apa ya hehe. Ok mari kita besok tanya mba dita atau tabita. Eh atau mari bertanya kharisma dan febby. Sekarang gini dulu deh yey biar ada isinya pokonya triathlon oke</p>
+                <p data-aos="fade-up">Triathlon is a competition consisting of series of sports, that is swimming, bicycle racing, and running which carried out continuously in one unit of time. Choose your triathlon registration category here:</p>
               </div>
           
 
@@ -132,7 +132,7 @@
                           <div class="btn-wrap">
                             <button class="btn-buyy" name="id_paket" type="submit" value="<?=$row['id_paket'];?>">Register</button>
                           </div>
-                        </form>
+                  <!--       </form> -->
                     <?php } 
                        elseif($row['id_paket'] == 4){?>
                         <ul>
@@ -146,11 +146,11 @@
                             </ol>
                           </li>
                         </ul>  
-                          <form action="/daftar" method="post" onSubmit="return confirm('Register this competition?');">
+                         <!--  <form action="/daftar" method="post" onSubmit="return confirm('Register this competition?');"> -->
                             <input type="hidden" name="harga" value="<?= $row['harga']?>"> 
                             <br><br><br>            
                             <div class="btn-wrap">
-                              <button class="btn-buyy" type="submit" value="<?=$row['id_paket'];?>">Register</button>
+                              <button class="btn-buyy" onclick="window.location='<?= base_url('kids-tri') ?>';" value="<?=$row['id_paket'];?>">Register</button>
                             </div>
                         <!--   </form> -->
                       

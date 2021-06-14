@@ -86,7 +86,7 @@
                           <div class="col-md-4">
                               <div class="profile-img">
                                   <h3>Welcome,</h3>
-                                  <h3 style="color: #e60000"><?= $users['nama_panjang'] ?></h3>
+                                  <h3 style="color: #e60000">Lala Lita</h3>
                                <!--    <p class="proile-rating">STATUS : <span style="background-color: #d6cac9">Tidak aktif</span></p>     -->
                               </div>
                           </div>

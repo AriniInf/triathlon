@@ -40,25 +40,25 @@
             <br><br><br>
             <div class="section-title" data-aos="fade-up">
               <h2>Ranking</h2>
-              <p>Look Rank Triathlon here ini diisi apa ya allah huhuhu bertanya siapa ok tanya mba dita besoook</p>
+              <p>You can look triathlon tankings listed here by category</p>
             </div>
 
             <div class="row">
               <div class="col-lg-4 col-md-6" data-aos="fade-up">
-                <a href="<?= base_url('rank-men') ?>">
+                <a href="#">
                 <div class="icon-box">
                   <div class="icon"><i class="icofont-settings"></i></div>
                   <h4 class="title">Men</h4>
-                  <p class="description" style="color: #313030;font-family: Open Sans, sans-serif">Look Rank Triathlon here ini diisi apa ya allah huhuhu bertanya siapa ok tanya mba dita besoook</p>
+                  <p class="description" style="color: #313030;font-family: Open Sans, sans-serif"><b>Men's ranking on triathlon</b></p>
                 </div>
                 </a>
               </div>
               <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <a href="<?= base_url('rank-women') ?>">
+                <a href="#">
                 <div class="icon-box">
                   <div class="icon"><i class="icofont-chart-bar-graph"></i></div>
                   <h4 class="title">Women</h4>
-                  <p class="description" style="color: #313030;font-family: Open Sans, sans-serif">Minim veniam, Look Rank Triathlon here ini diisi apa ya allah huhuhu bertanya siapa ok tanya mba dita besoook pokonya ok</p>
+                  <p class="description" style="color: #313030;font-family: Open Sans, sans-serif"><b>Women's ranking on triathlon</b></p>
                 </div>
                 </a>
               </div>
@@ -67,7 +67,7 @@
                 <div class="icon-box">
                   <div class="icon"><i class="icofont-tasks-alt"></i></div>
                   <h4 class="title">Rank Criteria</h4>
-                  <p class="description" style="color: #313030;font-family: Open Sans, sans-serif">Look Rank Triathlon here ini diisi apa ya allah huhuhu bertanya siapa ok tanya mba dita besoook</p>
+                  <p class="description" style="color: #313030;font-family: Open Sans, sans-serif"><b>Read the criteria ranking</b></p>
                 </div>
                 </a>
               </div>
