@@ -171,40 +171,74 @@ class Invoice extends Controller
      public function approve(){
         $id = $this->request->getVar('id_invoice');
         $invoiceModel = new InvoiceModel();
-        $data = [
+        $data['users'] = $invoiceModel->get_user($id);
+        $data['members'] = $invoiceModel->get_member($id);
+        print_r($data['members']);
+        $receiver = $this->request->getVar('email');
+        $receiver_nama = $this->request->getVar('nama_panjang');
+        echo $receiver;
+        $input = [
             'status' => 2
         ];
 
         $this->email = \Config\Services::email();
         
-        $this->email->setFrom('arini.inf@gmail.com','ariniindah');
-		$this->email->setTo('inf.arini@gmail.com');
+        $this->email->setFrom('triathlonunesa@gmail.com','UNESA Triathlon');
+		$this->email->setTo($receiver);
 
 		// $this->email->attach($attachment);
+        $body = view('email_approve', $data);
 
-		$this->email->setSubject('Approve');
-		$this->email->setMessage('Hai apa kabar');
+		$this->email->setSubject('Payment Approval');
+		$this->email->setMessage($body);
 
         if ($this->email->send()) 
 		{
-            echo 'Email successfully sent';
-            $invoiceModel->update_invoice($data, $id);
+            $invoiceModel->update_invoice($input, $id);
+            return redirect()->back();
         } 
 		else 
 		{
             $data = $this->email->printDebugger(['headers']);
-            print_r($data);
+            print_r($input);
         }
      }
 
 
      public function reject(){
-        $invoiceModel = new InvoiceModel();
         $id = $this->request->getVar('id_invoice');
-        $data = [
+        $invoiceModel = new InvoiceModel();
+        $data['users'] = $invoiceModel->get_user($id);
+        $data['members'] = $invoiceModel->get_member($id);
+        print_r($data['members']);
+        $receiver = $this->request->getVar('email');
+        $receiver_nama = $this->request->getVar('nama_panjang');
+        echo $receiver;
+        $input = [
             'status' => 3
         ];
-        $invoiceModel->update_invoice($data, $id);
+
+        $this->email = \Config\Services::email();
+        
+        $this->email->setFrom('triathlonunesa@gmail.com','UNESA Triathlon');
+		$this->email->setTo($receiver);
+
+		// $this->email->attach($attachment);
+        $body = view('email_reject', $data);
+
+		$this->email->setSubject('Payment Rejection');
+		$this->email->setMessage($body);
+
+        if ($this->email->send()) 
+		{
+            $invoiceModel->update_invoice($input, $id);
+            return redirect()->back();
+        } 
+		else 
+		{
+            $data = $this->email->printDebugger(['headers']);
+            print_r($input);
+        }
      }
     
 }

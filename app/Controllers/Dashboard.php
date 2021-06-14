@@ -42,4 +42,5 @@ class Dashboard extends Controller
             return view('member/dash_tidakaktif',$data);
         }
     }
+    
 }

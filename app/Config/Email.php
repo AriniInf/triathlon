@@ -34,6 +34,15 @@ class Email extends BaseConfig
 	 * @var string
 	 */
 	// public $protocol = 'mail';
+	// public $protocol = 'smtp';
+	// public $SMTPHost = 'smtp.gmail.com';
+	// public $SMTPUser = 'triathlonunesa@gmail.com';
+	// public $SMTPPass = 'unesatriathlon2021';
+	// public $SMTPPort = 465;
+	// public $SMTPCrypto = 'ssl';
+	// public $mailType = 'html';
+
+	// public $protocol = 'mail';
 	public $protocol = 'smtp';
 	public $SMTPHost = 'smtp.gmail.com';
 	public $SMTPUser = 'arini.inf@gmail.com';

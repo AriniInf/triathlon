@@ -138,9 +138,13 @@
                   </td>
                   <td>
                     <form action="/approve" method="post">
+                      <input type="hidden" name="email" value="<?= $row->email ?>">
+                      <input type="hidden" name="nama_panjang" value="<?= $row->nama_panjang ?>">
                       <button class="btn-buyy" name="id_invoice" type="submit" value="<?=$row->id_invoice?>"><?=$row->id_invoice?>Approve</button>
                     </form>
                     <form action="/reject" method="post">
+                      <input type="hidden" name="email" value="<?= $row->email ?>">
+                      <input type="hidden" name="nama_panjang" value="<?= $row->nama_panjang ?>">
                       <button class="btn-buyy" name="id_invoice" type="submit" value="<?=$row->id_invoice?>"><?=$row->id_invoice?>Reject</button>
                     </form>
                    

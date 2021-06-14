@@ -32,4 +32,24 @@ class InvoiceModel extends Model{
         $query = $builder->get();
         return $query->getResult();
     }
+
+    public function get_user($id){
+        $builder = $this->db->table($this->table);
+        $builder->select('akun_user.email, akun_user.nama_panjang, invoice.tanggal_bayar, invoice.id_invoice, sub_paket.nama_sub');
+        $builder->join('akun_user', 'invoice.email = akun_user.email');
+        $builder->join('sub_paket', 'invoice.id_sub = sub_paket.id_sub');
+        $builder->where('invoice.id_invoice', $id);
+        $query = $builder->get();
+        return $query->getResult();
+    }
+
+    public function get_member($id){
+        $builder = $this->db->table($this->table);
+        $builder->select('peserta.nama_panjang, peserta.id_regis');
+        $builder->join('peserta', 'invoice.id_invoice = peserta.id_invoice');
+        $builder->where('invoice.id_invoice', $id);
+        $query = $builder->get();
+        return $query->getResultArray();
+
+    }
 }
