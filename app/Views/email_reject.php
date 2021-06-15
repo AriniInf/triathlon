@@ -9,23 +9,23 @@
 <body>
 <?php foreach($users as $user){ ?>
     <h2>Hai <b><?= $user->nama_panjang ?></b>,</h2>
-    <h4>Pembayaran yang kamu lakukan ditolak, tolong unggah bukti bayar yang valid</h4>
+    <h4>Payment you made was rejected, please open your dashboard and upload a valid payment</h4>
     <table>
     <tr>
     <th>Order ID</th>
     <td><?= $user->id_invoice ?></td>
     </tr>
     <tr>
-    <th>Tanggal Pembayaran</th>
+    <th>Order Date</th>
     <td><?= $user->tanggal_bayar ?></td>
     </tr>
     <tr>
-    <th>Paket</th>
+    <th>Package</th>
     <td><?= $user->nama_sub ?></td>
     </tr>
     <tr>
     <th>Status</th>
-    <td>Pembayaran ditolak</td>
+    <td>Payment Rejected</td>
     </tr>
     </table>
 <?php } ?>

@@ -175,7 +175,7 @@ class Invoice extends Controller
 
      }
 
-     public function approve(){
+    public function approve(){
         $id = $this->request->getVar('id_invoice');
         $invoiceModel = new InvoiceModel();
         $data['users'] = $invoiceModel->get_user($id);
@@ -207,12 +207,13 @@ class Invoice extends Controller
             //$invoiceModel->update_invoice($input, $id);
             return redirect()->to('/dashboard-admin');;
         } 
+    }
         else 
         {
             $input = $this->email->printDebugger(['headers']);
             print_r($input);
         }
-     }
+    }
 
 
      public function reject(){

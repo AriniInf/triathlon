@@ -8,24 +8,24 @@
 </head>
 <body>
 <?php foreach($users as $user){ ?>
-    <h2>Hai <b><?= $user->nama_panjang ?></b>,</h2>
-    <h4>Pembayaran kamu berhasil dikonfirmasi</h4>
+    <h2>Hello <b><?= $user->nama_panjang ?></b>,</h2>
+    <h4>Your Invoice is confirmed, Registration Success !!</h4>
     <table>
     <tr>
     <th>Order ID</th>
     <td><?= $user->id_invoice ?></td>
     </tr>
     <tr>
-    <th>Tanggal Pembayaran</th>
+    <th>Order Date</th>
     <td><?= $user->tanggal_bayar ?></td>
     </tr>
     <tr>
-    <th>Paket</th>
+    <th>Package</th>
     <td><?= $user->nama_sub ?></td>
     </tr>
     <tr>
     <th>Status</th>
-    <td>Berhasil Bayar</td>
+    <td>Registration Completed</td>
     </tr>
     </table>
 <?php } 
@@ -34,8 +34,8 @@
 
     <thead>
     <tr>
-        <th>ID Registrasi</th>
-        <th>Nama Panjang</th>
+        <th>Registration ID</th>
+        <th>Full Name</th>
     </tr>
     </thead>
     <tbody>
