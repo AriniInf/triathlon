@@ -59,7 +59,7 @@
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
        	  <li>
-          	<h5 style="margin: 16px 29px;color: white"><strong>Hi, Kalina (Admin1)</strong></h5>
+          	<h5 style="margin: 16px 29px;color: white"><strong>Hi, Admin</strong></h5>
        	  </li>
         </ul>
       </div>

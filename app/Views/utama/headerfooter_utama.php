@@ -45,9 +45,10 @@
       <div class="container d-flex">
 
         <div class="row logo mr-auto">
-          <div class="col-md-4"><img class="img-responsive" src="assets/img/iccom.png" alt="logo1"></div>
+          <!-- <div class="col-md-4"><img class="img-responsive" src="assets/img/iccom.png" alt="logo1"></div> -->
           <!-- Uncomment below if you prefer to use an image logo -->
           <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+          <div class=""></div>
         </div>
 
         <nav class="nav-menu d-none d-lg-block">

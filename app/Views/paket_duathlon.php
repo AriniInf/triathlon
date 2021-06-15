@@ -30,7 +30,7 @@
           <div data-aos="fade-up" data-aos-delay="150">
             <div class="box tambahan">
               <h3><?= $row['nama_paket'] ?></h3>
-              <h4><sup>Rp</sup><?= $row['harga']?></h4>
+              <h4><sup></sup></h4>
               <h6>Sprint Distance :</h6>
               <ul style="margin-left: 36%">
               	<li>Run    : 2.5 km</li>
@@ -45,28 +45,28 @@
 
                 <!--     <form action="<?= base_url('daftar') ?>" method="post" onSubmit="return confirm('Register this competition?');"> -->
                       <input type="hidden" name="harga" value="<?= $row['harga']?>">
-                        <div class="form-check" style="margin-left: 9px ">
+                        <div class="form-check">
                           <input class="form-check-input" type="radio" id="exampleRadios1" value="1" name="elitedua">
                           <label class="form-check-label">
-                            Kamar Single (Rp.1.610.000)
+                            Room 1 person (Rp.1.310.000)
                           </label>
                         </div>
                         <div class="form-check">
                           <input class="form-check-input" type="radio" name="elitedua" id="exampleRadios2" value="2">
                           <label class="form-check-label">
-                            Kamar Twin (Rp.2.620.000)
+                            Room 2 person (Rp.2.220.000)
                           </label>
                         </div>
-                        <div class="form-check" style="margin-left: 7px">
+                        <div class="form-check" >
                           <input class="form-check-input" type="radio" name="elitedua" id="exampleRadios3" value="3">
                           <label class="form-check-label">
-                            Kamar 3 Org (Rp.3.630.000)
+                            Room 3 person (Rp.3.130.000)
                           </label>
                         </div>
-                        <div class="form-check" style="margin-left: 7px">
+                        <div class="form-check" >
                           <input class="form-check-input" type="radio" name="elitedua" id="exampleRadios4" value="4">
                           <label class="form-check-label">
-                            Kamar 4 Org (Rp.4.640.000)
+                            Room 4 person (Rp.4.040.000)
                           </label>
                         </div>
 

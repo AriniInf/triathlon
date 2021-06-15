@@ -136,7 +136,7 @@
                             <input type="submit" name="register" class="register" value="Register Here" style="margin-bottom: 10px">
                         </div>
 
-                        <input type="hidden" name="harga" value="1610000">
+                        <input type="hidden" name="harga" value="1310000">
                         <input type="hidden" name="id_sub" value="5">
 
                     </div>
