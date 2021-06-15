@@ -53,8 +53,8 @@ $routes->get('/gallery','Home::gallery');
 $routes->get('/dashboard_pembayaran','Dashboard::pembayaran');
 
 $routes->get('/login-admin', 'Admin::index');
-$routes->get('/dashboard-admin', 'Admin::dashboard_admin');
-$routes->post('/post-login-admin','Admin::auth');
+$routes->get('/dashboard-admin', 'Admin::dashboard_admin', ['filter' => 'adminAuth']);
+$routes->post('/post-login-admin','Admin::auth', ['filter' => 'adminAuth']);
 $routes->get('/logout', 'Admin::logout');
 
 $routes->get('/rank-men','Home::rank_men');

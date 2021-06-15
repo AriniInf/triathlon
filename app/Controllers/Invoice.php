@@ -125,7 +125,7 @@ class Invoice extends Controller
             // print_r($users);
             // echo "</pre>";
         $pesertamodel->insertBatch($users);
-        return redirect()->route('dashboard');
+        return redirect()->to('/dashboard-user');
 
            
         
@@ -180,7 +180,7 @@ class Invoice extends Controller
         $invoiceModel = new InvoiceModel();
         $data['users'] = $invoiceModel->get_user($id);
         $data['members'] = $invoiceModel->get_member($id);
-        print_r($data['members']);
+        // print_r($data['members']);
         $receiver = $this->request->getVar('email');
         $receiver_nama = $this->request->getVar('nama_panjang');
         echo $receiver;
@@ -191,7 +191,9 @@ class Invoice extends Controller
         $this->email = \Config\Services::email();
         
         $this->email->setFrom('triathlonunesa2021@gmail.com','UNESA Triathlon');
+
         $this->email->setTo($receiver);
+
 
         // $this->email->attach($attachment);
         $body = view('email_approve', $data);
@@ -199,15 +201,15 @@ class Invoice extends Controller
         $this->email->setSubject('Payment Approval');
         $this->email->setMessage($body);
 
-        if ($this->email->send()) 
+        if ($this->email->send()){
         {
             echo 'email terkirim';
-            // $invoiceModel->update_invoice($input, $id);
-            return redirect()->back();
+            //$invoiceModel->update_invoice($input, $id);
+            return redirect()->to('/dashboard-admin');;
         } 
         else 
         {
-            $data = $this->email->printDebugger(['headers']);
+            $input = $this->email->printDebugger(['headers']);
             print_r($input);
         }
      }
@@ -229,7 +231,9 @@ class Invoice extends Controller
         $this->email = \Config\Services::email();
         
         $this->email->setFrom('triathlonunesa2021@gmail.com','UNESA Triathlon');
+
         $this->email->setTo($receiver);
+
 
         // $this->email->attach($attachment);
         $body = view('email_reject', $data);
@@ -240,11 +244,13 @@ class Invoice extends Controller
         if ($this->email->send()) 
         {
             $invoiceModel->update_invoice($input, $id);
-            return redirect()->back();
+            return redirect()->to('/dashboard-admin');
         } 
+
         else 
         {
-            $data = $this->email->printDebugger(['headers']);
+            $input = $this->email->printDebugger(['headers']);
+
             print_r($input);
         }
      }

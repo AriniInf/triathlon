@@ -46,7 +46,7 @@ class Email extends BaseConfig
 	public $protocol = 'smtp';
 	public $SMTPHost = 'smtp.gmail.com';
 	public $SMTPUser = 'triathlonunesa2021@gmail.com';
-	public $SMTPPass = 'unesatriathlon2021';
+	public $SMTPPass = 'unesatriathlon21';
 	public $SMTPPort = 465;
 	public $SMTPCrypto = 'ssl';
 	public $mailType = 'html';
