@@ -36,7 +36,7 @@
         <input type="hidden" name="penanda[1]" id="penanda1" value="athlete">
         <input type="hidden" name="penanda[2]" id="penanda2" value="athlete">
         <input type="hidden" name="penanda[3]" id="penanda3" value="athlete">
-        <input type="hidden" name="harga" value="3630000">
+        <input type="hidden" name="harga" value="3130000">
         <input type="hidden" name="id_sub" value="3">
 
         <div class="atlet1">

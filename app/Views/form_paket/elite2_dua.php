@@ -40,7 +40,7 @@
     <form id="myform" action="/daftar" method="post">
         <input type="hidden" name="penanda[1]" id="penanda1" value="athlete">
         <input type="hidden" name="penanda[2]" id="penanda2" value="athlete">
-        <input type="hidden" name="harga" value="2620000">
+        <input type="hidden" name="harga" value="2220000">
         <input type="hidden" name="id_sub" value="2">
 
         <div class="atlet1">

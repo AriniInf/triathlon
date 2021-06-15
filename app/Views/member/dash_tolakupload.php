@@ -7,13 +7,13 @@
 <?= $this->section('content') ?>
 
                                 <div class="container">
-                                  <p class="proile-rating  text-right" style="font-size: 20px;color: #313030">Status :  <span class="badge badge-danger" style="color: white">Upload Ditolak</span>
+                                  <p class="proile-rating  text-right" style="font-size: 20px;color: #313030">Status :  <span class="badge badge-danger" style="color: white">Upload Rejected</span>
                                   </p>
                                 </div>
 
                               <div class="container">
                                 <div class="card bg-oren">
-                                  <div class="card-body"><center><h6 style="color: white;font-size: 15px">Bukti yang dikirimkan ditolak<br>Silahkan mengirim bukti transfer kembali dengan jelas</h6></center></div>
+                                  <div class="card-body"><center><h6 style="color: white;font-size: 15px">Payment Rejected<br>Please upload your payment clearly</h6></center></div>
                                 </div>
                                 <br>
                                 
@@ -29,5 +29,13 @@
                                     </div>
                                   </form>
                               </div>
+
+  <script>
+  // Add the following code if you want the name of the file appear on select
+  $(".custom-file-input").on("change", function() {
+    var fileName = $(this).val().split("\\").pop();
+    $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+  });
+  </script>
 
 <?= $this->endSection() ?>

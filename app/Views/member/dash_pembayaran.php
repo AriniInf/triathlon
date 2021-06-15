@@ -8,11 +8,11 @@
     <!-- konten view di sini -->
                                 <div class="container">
                                 <?php if($invoice['status']==0){ ?>
-                                  <p class="proile-rating  text-right" style="font-size: 20px;color: #313030">Status :  <span class="badge badge-dark" style="color: white">Belum Bayar</span>
+                                  <p class="proile-rating  text-right" style="font-size: 20px;color: #313030">Status :  <span class="badge badge-dark" style="color: white">Unpaid</span>
                                   </p>
                                 <?php } 
                                 else if($invoice['status']==1){ ?>
-                                  <p class="proile-rating  text-right" style="font-size: 20px;color: #313030">Status :  <span class="badge badge-primary" style="color: white">Menunggu Konfirmasi</span>
+                                  <p class="proile-rating  text-right" style="font-size: 20px;color: #313030">Status :  <span class="badge badge-primary" style="color: white">Waiting Approval</span>
                                   </p>
                                 <?php } ?>
                                 <!--   <p class="proile-rating  text-right" style="font-size: 20px;color: #313030">Status :  <span class="badge badge-primary" style="color: white">Menunggu Konfirmasi</span>
@@ -62,13 +62,29 @@
                                 <?php if($invoice['status']==0){ ?>
                                   <div class="card bg-oren">
                                     <div class="card-body" style="color: white;font-size: 15px">
-                                      <h6>Silahkan membayar ke rekening berikut :</h6><br>
-                                      <center><h6>1400027777797 (Mandiri)<br>a/n WISATA TIRTA JAWA TI<br></h6></center><br>
-                                      <h6>Setelah membayar, silahkan upload bukti bayar dan tunggu notifikasi dari email pembayaran berhasil</h6>
+                                      <h6>Please pay to the following bank account :</h6><br>
+
+                                        <table>
+                                            <tr>
+                                                <th>Account Number</th>
+                                                <td>: 1400027777797</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Account Name</th>
+                                                <td>: WISATA TIRTA JAWA TIMUR</td>
+                                            </tr>
+                                            <tr>
+                                              <th>BANK</th>
+                                              <td>: Mandiri</td>
+                                            </tr>
+                                        </table>
+
+                                      <br>
+                                      <h6>Please upload your proof of payment here</h6>
                                     </div>
                                   </div>
                                   <br>
-                                  <?= $invoice['id_invoice'] ?>
+                              
 
                                   <form method="post" action="<?= base_url('upload-bukti') ?>" enctype="multipart/form-data">
                                     <div class="custom-file mb-3">

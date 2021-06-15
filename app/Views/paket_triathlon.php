@@ -33,7 +33,14 @@
                 <div class="col-lg-4 col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="50">
                   <div class="box featured">
                     <h3><?= $row['nama_paket'] ?></h3>
-                    <h4><sup>Rp</sup><?= $row['harga']?></h4>
+
+                    <?php if($row['harga'] == 0){ ?>
+                      <h4><sup>-</sup></h4>
+                    <?php } 
+                    else { ?>
+                      <h4><sup>Rp</sup><?= $row['harga']?></h4>
+                    <?php } ?>
+
                     <h6>Sprint Distance :</h6>
                      <?php if($row['id_paket'] == 2){?>
                     <ul>
@@ -50,28 +57,28 @@
 
                       <!--     <form action="/daftar" method="post" onSubmit="return confirm('Register this competition?');"> -->
                             <input type="hidden" name="harga" value="<?= $row['harga']?>">
-                              <div class="form-check" style="margin-left: 9px ">
+                              <div class="form-check">
                                 <input class="form-check-input" type="radio" name="elitetri" id="exampleRadios1" value="5">
                                 <label class="form-check-label">
-                                  Kamar Single (Rp.1.610.000)
+                                 Room 1 person (Rp.1.310.000)
+                                </label>
+                              </div>
+                              <div class="form-check" >
+                                <input class="form-check-input" type="radio" name="elitetri" id="exampleRadios2" value="6">
+                                <label class="form-check-label">
+                                  Room 2 person (Rp.2.220.000)
+                                </label>
+                              </div>
+                              <div class="form-check" >
+                                <input class="form-check-input" type="radio" name="elitetri" id="exampleRadios3" value="7">
+                                <label class="form-check-label">
+                                  Room 3 person (Rp.3.130.000)
                                 </label>
                               </div>
                               <div class="form-check">
-                                <input class="form-check-input" type="radio" name="elitetri" id="exampleRadios2" value="6">
-                                <label class="form-check-label">
-                                  Kamar Twin (Rp.2.620.000)
-                                </label>
-                              </div>
-                              <div class="form-check" style="margin-left: 7px">
-                                <input class="form-check-input" type="radio" name="elitetri" id="exampleRadios3" value="7">
-                                <label class="form-check-label">
-                                  Kamar 3 Org (Rp.3.630.000)
-                                </label>
-                              </div>
-                              <div class="form-check" style="margin-left: 7px">
                                 <input class="form-check-input" type="radio" name="elitetri" id="exampleRadios4" value="8">
                                 <label class="form-check-label">
-                                  Kamar 4 Org (Rp.4.640.000)
+                                  Room 4 person (Rp.4.040.000)
                                 </label>
                               </div>
 
