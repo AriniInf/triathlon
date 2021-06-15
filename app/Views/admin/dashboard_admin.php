@@ -134,18 +134,18 @@
                   <td id="y"><?= $row->nama_sub ?></td>
                   <td id="y">Rp.<?= $row->harga ?></td>
                   <td id="z">
-                    <img class="img-responsive" src="<?=base_url()?>/uploads/bukti_bayar/<?=$row->bukti_bayar?>" alt="logo1" style="max-height: 90px;">
+                    <img class="img-responsive" src="<?=base_url()?>/uploads/bukti_bayar/<?=$row->bukti_bayar?>" alt="logo1" style="max-height: 150px;">
                   </td>
                   <td>
                     <form action="/approve" method="post">
                       <input type="hidden" name="email" value="<?= $row->email ?>">
                       <input type="hidden" name="nama_panjang" value="<?= $row->nama_panjang ?>">
-                      <button class="btn-buyy" name="id_invoice" type="submit" value="<?=$row->id_invoice?>">Approve</button>
+                      <button class="btn btn-danger btn-sm btn-buyy" name="id_invoice" type="submit" value="<?=$row->id_invoice?>">Approve</button>
                     </form>
                     <form action="/reject" method="post">
                       <input type="hidden" name="email" value="<?= $row->email ?>">
                       <input type="hidden" name="nama_panjang" value="<?= $row->nama_panjang ?>">
-                      <button class="btn-buyy" name="id_invoice" type="submit" value="<?=$row->id_invoice?>">Reject</button>
+                      <button class="btn btn-primary btn-sm btn-buyy" name="id_invoice" type="submit" value="<?=$row->id_invoice?>">Reject</button>
                     </form>
                    
                   </td>

@@ -41,75 +41,73 @@
 
                             	<!-- isi content -->
 
-    <div class="container">
-    <div class="table-responsive text-nowrap">
-        <!--Table-->
-        <table class="table table-striped table-hover text-center">
+                              <div class="container">
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                          <div class="text-xs-center">
+                                              <i class="fa fa-search-plus float-xs-left icon"></i>
+                                            <div class="row">
+                                              <div class="col-md-8">
+                                                <h2>Registration-ID #<?= $invoice['id_invoice'] ?></h2>
+                                              </div>
+                                              <div class="col-md-4">
+                                                <p class="proile-rating text-right" style="font-size: 20px;color: #313030">Status :  <span class="badge badge-success" style="color: white">Aktif</span>
+                                                </p>
+                                              </div>
+                                            </div>
 
-          <!--Table head-->
-          <thead style="background-color: #f2dede">
-            <tr>
-             <th>No</th>
-             <th>ID Registrasi</th>
-             <th>Full Name</th>
-             <th>Nick Name</th>
-             <th>Bib Name</th>
+                                          </div>
+                                          <hr>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                          <div class="card ">
 
-             <th>Date of Birth</th>
-             <th>Country Of Citizenship</th>
-             <th>KTP</th>
-             <th>Phone</th>
-             <th>Adress</th>
+                                              <div class="card-header bg-oren">
+                                                  <h4 class="text-xs-center" style="color: white"><strong>Personal Information</strong></h4>
+                                              </div>
 
-             <th>Sex</th>
-             <th>Blood Type</th>
-
-
-             <th>Community Name</th>
-             <th>Swim Time 750</th>
-             <th>Jersey Size</th>
-
-             <!-- <th>Emergency Contact Name</th>
-             <th>Emergency Contact Phone</th>
-             <th>Emergency Contact Email</th> -->
-
-            </tr>
-          </thead>
-          <!--Table head-->
-
-          <!--Table body-->
-          <tbody>
-          <?php $no = 1; foreach($peserta as $row){ ?>
-            <tr>
-                <td><?= $no++ ?></td>
-                <td id="1"><?= $row['id_regis'] ?></td>
-                <td id="1"><?= $row['nama_panjang'] ?></td>
-                <td id="2"><?= $row['nama_panggilan'] ?></td>
-                <td id="3"><?= $row['nama_bib'] ?></td>
-                <td id="4"><?= $row['tanggal_lahir'] ?></td>
-                <td id="5"><?= $row['kewarganegaraan'] ?></td>
-                <td id="6"><?= $row['no_ktp'] ?></td>
-                <td id="7"><?= $row['no_hp'] ?></td>
-                <td id="8"><?= $row['alamat'] ?></td>
-                <td id="9"><?= $row['sex'] ?></td>
-                <td id="10"><?= $row['gol_darah'] ?></td>
-                <td id="11"><?= $row['nama_komunitas'] ?></td>
-                <td id="12"><?= $row['swim_time_750'] ?></td>
-                <td id="13"><?= $row['ukuran_jersey'] ?></td>
-                <!-- <td id="14"></td>
-                <td id="15"></td>
-                <td id="16"></td> -->
-            </tr>
-            <?php } ?>
-
-          </tbody>
-          <!--Table body-->
-
-
-        </table>
-        <!--Table-->
-      </div>
-      <br>
+                                              <div class="container">
+                                                <br>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <label>Full Name</label>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <p style="color: black"><?= $users['nama_panjang'] ?></p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <label>Email</label>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <p style="color: black"><?= $users['email'] ?></p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <label>Phone</label>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <p style="color: black"><?= $users['no_hp'] ?></p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <label>Address</label>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <p style="color: black"><?= $users['alamat'] ?></p>
+                                                    </div>
+                                                </div>
+                                              </div>
+  
+                                          </div>
+                                          <br>
+                                      </div>
+                                  </div>
                                   <div class="row">
                                       <div class="col-md-12">
                                           <div class="card ">
@@ -127,7 +125,7 @@
                                                           </thead>
                                                           <tbody>
                                                               <tr>
-                                                                  <td><?= $subpaket['nama_sub'] ?></td>
+                                                                  <td><?= $competition['nama_competition'] ?></td>
                                                                   <td class="text-xs-right">Rp.<?= $invoice['harga'] ?></td>
                                                               </tr>
                                                               <tr>

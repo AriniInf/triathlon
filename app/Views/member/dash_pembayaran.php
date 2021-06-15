@@ -63,7 +63,7 @@
                                   <div class="card bg-oren">
                                     <div class="card-body" style="color: white;font-size: 15px">
                                       <h6>Silahkan membayar ke rekening berikut :</h6><br>
-                                      <center><h6>BNI : 10387178368176<br>BRI : 861371567135<br></h6></center><br>
+                                      <center><h6>1400027777797 (Mandiri)<br>a/n WISATA TIRTA JAWA TI<br></h6></center><br>
                                       <h6>Setelah membayar, silahkan upload bukti bayar dan tunggu notifikasi dari email pembayaran berhasil</h6>
                                     </div>
                                   </div>

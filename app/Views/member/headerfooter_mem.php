@@ -72,7 +72,7 @@
               <li><a href="<?= base_url('') ?>">Ranking</a></li>
               <li><a href="<?= base_url('') ?>">About</a></li>
               <li><a href="<?= base_url('') ?>">Contact Us</a></li>
-              <li><a href="<?= base_url('dashboard') ?>">Akun Member</a></li>
+              <li><a href="<?= base_url('dashboard-user') ?>">Akun Member</a></li>
 
             </ul>
           </nav><!-- .nav-menu -->
@@ -103,8 +103,8 @@
                           <div class="col-md-4">
                               <div class="profile-work">
                                   <p>ACCOUNT MENU</p>
-                                  <a href="<?= base_url('dashboard') ?>">Dashboard</a><br/><hr>
-                                  <a href="<?= base_url('comp_member') ?>">Competition Member</a><br/><hr>
+                                  <a href="<?= base_url('dashboard-user') ?>">Dashboard</a><br/><hr>
+                                 <!--  <a href="<?= base_url('comp_member') ?>">Competition Member</a><br/><hr> -->
                                   <a href="<?= base_url('logout') ?>">Logout</a><br/><hr>
                               </div>
                           </div>
@@ -136,7 +136,7 @@
             <div class="social-links text-center text-lg-right pt-3 pt-lg-0">
               <a href="#" class="youtube"><i class="bx bxl-youtube"></i></a>
               <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="https://www.instagram.com/unesatriathlon/" class="instagram"><i class="bx bxl-instagram"></i></a>
           <!--     <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
               <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
             </div>

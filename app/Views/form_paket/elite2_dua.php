@@ -20,8 +20,16 @@
 </style>
 
 <div class="container awal" style="background-color: #fff9f7">
+    <div class="container">
+      <div class="card bg-oren">
+        <div class="card-body"><center><h6 style="color: white;font-size: 15px">Silahkan mengisi semua field form dengan <b>"LENGKAP"</b> dan <b>"BENAR"</b><br><br>Karena setelah melakukan registrasi, data tidak dapat diedit kembali</h6></center></div>
+      </div>
+    </div>
+    <br>
+
     <h3 style="color: #e60000;margin-left: 7%">Data Participant 1</h3>
     <p style="color: black;margin-left: 7%"><b>Choose the role of participant 1</b></p>
+
     <a class="btn btn-sm btn-danger at"  onclick="show_atlet()"> Athlete</a>
     <a class="btn btn-sm btn-danger ofc" id="ofc1" onclick="show_official()">Official</a>
         <?php if(session()->getFlashdata('msg')):?>
@@ -32,7 +40,7 @@
     <form id="myform" action="/daftar" method="post">
         <input type="hidden" name="penanda[1]" id="penanda1" value="athlete">
         <input type="hidden" name="penanda[2]" id="penanda2" value="athlete">
-        <input type="hidden" name="harga" value="50">
+        <input type="hidden" name="harga" value="2620000">
         <input type="hidden" name="id_sub" value="2">
 
         <div class="atlet1">
@@ -213,7 +221,7 @@
         </div>
 
     <!-- FORM AWAL KELARR -->
-
+    <hr>
     <h3 style="color: #e60000;margin-left: 7%">Data Participant 2</h3>
     <p style="color: black;margin-left: 7%"><b>Choose the role of participant 2</b></p>
     <a class="btn btn-sm btn-danger at2" onclick="show_atlet()"> Athlete</a>
@@ -393,7 +401,7 @@
                 </div>
             </div>
         </div>
-         <button type="submit" id="submit" class="btn btn-item btn-lg">REGISTER HERE</button>
+         <button type="submit" id="submit" class="btn btn-item btn-lg" style="padding-top: 17px;padding-bottom: 17px">Register Here</button>
     </form>
 </div>
 <!-- tutup container
