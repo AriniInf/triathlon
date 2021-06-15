@@ -75,11 +75,10 @@
 
             <li><a href="#contact">Contact Us</a></li>
             <li>
-              <?php if($session->get('email')){ ?>
-                <a href="<?= base_url('dashboard-user') ?>">Akun Member</a>
-              <?php } 
-              else { ?>
+              <?php if(is_null(session()->get('logged_in'))){ ?>
                 <a class="btn btn-oren" href="<?= base_url('login') ?>" role="button" style="color: white">Login</a>
+              <?php } 
+              else { ?><a href="<?= base_url('dashboard-user') ?>">Akun Member</a>
               <?php } ?>
 
             </li>

@@ -18,8 +18,12 @@
         <div class="container" data-aos="fade-in">
           <h1>Jaya Sport Industry</h1>
           <div class="d-flex align-items-center">
-            <i class="bx bxs-right-arrow-alt get-started-icon"></i>
-            <a href="<?= base_url('register') ?>" class="btn-get-started scrollto">Register</a>
+            <?php if(is_null(session()->get('logged_in'))){ ?>
+              <i class="bx bxs-right-arrow-alt get-started-icon"></i>
+              <a href="<?= base_url('register') ?>" class="btn-get-started scrollto">Register</a>
+            <?php } 
+            else { ?>
+            <?php } ?>
           </div>
         </div>
       </section><!-- End Hero -->

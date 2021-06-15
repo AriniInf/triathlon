@@ -62,7 +62,13 @@
             <li><a href="<?= base_url('') ?>">Ranking</a></li>
             <li><a href="<?= base_url('') ?>">About</a></li>
             <li><a href="<?= base_url('') ?>">Contact Us</a></li>
-            <li><a class="btn btn-oren" href="<?= base_url('login') ?>" role="button" style="color: white">Login</a></li>
+            <li>
+            <?php if(is_null(session()->get('logged_in'))){ ?>
+              <a class="btn btn-oren" href="<?= base_url('login') ?>" role="button" style="color: white">Login</a>
+            <?php } 
+            else { ?><a href="<?= base_url('dashboard-user') ?>">Akun Member</a>
+            <?php } ?>
+            </li>
 
           </ul>
         </nav><!-- .nav-menu -->
