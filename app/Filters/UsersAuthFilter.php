@@ -15,6 +15,7 @@ class UsersAuthFilter implements FilterInterface
             return redirect()->to('/login');
         }
 
+
     }
 
     //--------------------------------------------------------------------

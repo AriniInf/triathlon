@@ -18,7 +18,7 @@ class Dashboard extends Controller
         $user = session()->get('email');
         $data['users'] = $users->where('email', $user)->first();
         $invoice = $invoiceModel->where('email', $user)->first();
-        $data['peserta'] = $invoiceModel->get_member($invoice['id_invoice']);
+        
         if($invoice){
 
             $data['subpaket'] =  $subpaket->where('id_sub',$invoice['id_sub'])->first();
@@ -26,6 +26,7 @@ class Dashboard extends Controller
             $data['competition'] =  $competition->where('id_competition', $data['paket']['id_competition'])->first();
             $data['invoice'] = $invoice;
             if($invoice['status'] == 2){
+                $data['peserta'] = $invoiceModel->get_member($invoice['id_invoice']);
                 return view('member/dash_lunas', $data);
 
             }
