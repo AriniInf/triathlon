@@ -27,7 +27,7 @@ class Invoice extends Controller
             $id_invoice = 'TRX-'.uniqid();
             $data = [
                 'id_invoice' => $id_invoice,
-                'email' => $user,
+                'email' => $email,
                 'id_sub' => $this->request->getVar('id_sub'),
                 'harga' => $this->request->getVar('harga'),
                 'age_group' => $this->request->getVar('age_group'),
@@ -36,7 +36,7 @@ class Invoice extends Controller
             ];
         // print_r($data);
 
-            $invoice->insert($data);
+            $invoicemodel->insert($data);
 
             $users = array();
             // $nama_panggilan = $this->request->getVar('nama_panggilan');
@@ -121,7 +121,7 @@ class Invoice extends Controller
                 $index++;
                 }  
 
-                // echo "<pre>";
+                // echo "<pre>"; 
                 // print_r($users);
                 // echo "</pre>";
             $pesertamodel->insertBatch($users);
