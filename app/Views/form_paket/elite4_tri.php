@@ -20,6 +20,12 @@
 </style>
 
 <div class="container awal" style="background-color: #fff9f7">
+    <div class="container">
+      <div class="card bg-oren">
+        <div class="card-body"><center><h6 style="color: white;font-size: 15px">Silahkan mengisi semua field form dengan <b>"LENGKAP"</b> dan <b>"BENAR"</b><br><br>Karena setelah melakukan registrasi, data tidak dapat diedit kembali</h6></center></div>
+      </div>
+    </div>
+    <br>
     <h3 style="color: #e60000;margin-left: 7%">Data Participant 1</h3>
     <p style="color: black;margin-left: 7%"><b>Choose the role of participant 1</b></p>
     <a class="btn btn-sm btn-danger at"  onclick="show_atlet()"> Athlete</a>
@@ -211,7 +217,7 @@
         </div>
 
     <!-- FORM AWAL KELARR -->
-
+    <br>
     <h3 style="color: #e60000;margin-left: 7%">Data Participant 2</h3>
     <p style="color: black;margin-left: 7%"><b>Choose the role of participant 2</b></p>
     <a class="btn btn-sm btn-danger at2" onclick="show_atlet()"> Athlete</a>
@@ -393,7 +399,7 @@
         </div>
         
     <!-- FORM KEDUA KELARR -->
-
+    <br>
     <h3 style="color: #e60000;margin-left: 7%">Data Participant 3</h3>
     <p style="color: black;margin-left: 7%"><b>Choose the role of participant 3</b></p>
     <a class="btn btn-sm btn-danger at3" onclick="show_atlet()"> Athlete</a>
@@ -575,7 +581,7 @@
         </div>
         
     <!-- FORM KETIGA KELARR -->
-
+    <br>
     <h3 style="color: #e60000;margin-left: 7%">Data Participant 4</h3>
     <p style="color: black;margin-left: 7%"><b>Choose the role of participant 4</b></p>
     <a class="btn btn-sm btn-danger at4" onclick="show_atlet()"> Athlete</a>
@@ -757,8 +763,7 @@
         </div>
         
     <!-- FORM KEEMPAT KELARR -->
-
-         <button type="submit" id="submit" class="btn btn-item btn-lg">REGISTER HERE</button>
+         <button type="submit" id="submit" class="btn btn-item btn-lg" style="padding-top: 17px;padding-bottom: 17px">Register Here</button>
     </form>
 </div>
 <!-- tutup container

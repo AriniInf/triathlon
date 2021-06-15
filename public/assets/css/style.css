@@ -29,6 +29,9 @@ h1, h2, h3, h4, h5, h6 {
 .bg-oren{
   background-color: #e60000;
 }
+.bg-black{
+  background-color: black;
+}
 .bg-ijo{
   background-color:  #7ae83f;
 }

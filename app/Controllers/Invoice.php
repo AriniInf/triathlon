@@ -191,22 +191,24 @@ class Invoice extends Controller
         $this->email = \Config\Services::email();
         
         $this->email->setFrom('triathlonunesa2021@gmail.com','UNESA Triathlon');
-		$this->email->setTo($receiver);
 
-		// $this->email->attach($attachment);
+        $this->email->setTo($receiver);
+
+
+        // $this->email->attach($attachment);
         $body = view('email_approve', $data);
 
-		$this->email->setSubject('Payment Approval');
-		$this->email->setMessage($body);
+        $this->email->setSubject('Payment Approval');
+        $this->email->setMessage($body);
 
-        if ($this->email->send()) 
-		{
-            // echo 'email terkirim';
-            $invoiceModel->update_invoice($input, $id);
-            return redirect()->to('/dashboard-admin');
+        if ($this->email->send()){
+        {
+            echo 'email terkirim';
+            //$invoiceModel->update_invoice($input, $id);
+            return redirect()->to('/dashboard-admin');;
         } 
-		else 
-		{
+        else 
+        {
             $input = $this->email->printDebugger(['headers']);
             print_r($input);
         }
@@ -229,22 +231,26 @@ class Invoice extends Controller
         $this->email = \Config\Services::email();
         
         $this->email->setFrom('triathlonunesa2021@gmail.com','UNESA Triathlon');
-		$this->email->setTo($receiver);
 
-		// $this->email->attach($attachment);
+        $this->email->setTo($receiver);
+
+
+        // $this->email->attach($attachment);
         $body = view('email_reject', $data);
 
-		$this->email->setSubject('Payment Rejection');
-		$this->email->setMessage($body);
+        $this->email->setSubject('Payment Rejection');
+        $this->email->setMessage($body);
 
         if ($this->email->send()) 
-		{
+        {
             $invoiceModel->update_invoice($input, $id);
             return redirect()->to('/dashboard-admin');
         } 
-		else 
-		{
+
+        else 
+        {
             $input = $this->email->printDebugger(['headers']);
+
             print_r($input);
         }
      }
